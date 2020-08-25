@@ -1,0 +1,14 @@
+{
+  "name": "townscaper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "all": "node ./bin/all.js",
+    "encode": "node ./bin/encode.js",
+    "decode": "node ./bin/decode.js"
+  },
+  "dependencies": {
+    "base64url": "^3.0.1"
+  }
+}
