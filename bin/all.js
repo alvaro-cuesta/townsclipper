@@ -1,6 +1,6 @@
 const fs = require('fs')
 const { decodeSaveString } = require('../lib/codec')
-const { getBufferBytes, getBufferBits } = require('../lib/binary')
+const { getBufferBits } = require('../lib/binary')
 
 fs.rmdirSync('./out/', { recursive: true })
 fs.mkdirSync('./out/')
@@ -21,12 +21,6 @@ const entry = (comment, saveString) => {
   file.write(saveString)
   file.write('\n')
   all.write(saveString)
-  all.write('\n')
-
-  const bufferBytes = getBufferBytes(buffer)
-  file.write(bufferBytes)
-  file.write('\n')
-  all.write(bufferBytes)
   all.write('\n')
 
   const bufferBits = getBufferBits(buffer)
