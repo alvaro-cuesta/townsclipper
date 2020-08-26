@@ -1,6 +1,5 @@
 const fs = require('fs')
 const { decodeSaveString } = require('../lib/codec')
-const { getBufferBits } = require('../lib/binary')
 
 fs.rmdirSync('./out/', { recursive: true })
 fs.mkdirSync('./out/')
@@ -10,8 +9,6 @@ const all = fs.createWriteStream('./out/all')
 
 const entry = (comment, saveString) => {
   const file = fs.createWriteStream('./out/separate/' + saveString)
-
-  const buffer = decodeSaveString(saveString)
 
   file.write(comment)
   file.write('\n')
@@ -23,10 +20,10 @@ const entry = (comment, saveString) => {
   all.write(saveString)
   all.write('\n')
 
-  const bufferBits = getBufferBits(buffer)
-  file.write(bufferBits)
+  const bits = decodeSaveString(saveString)
+  file.write(bits)
   file.write('\n')
-  all.write(bufferBits)
+  all.write(bits)
   all.write('\n')
 
   file.close()

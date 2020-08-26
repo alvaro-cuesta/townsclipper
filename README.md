@@ -42,7 +42,8 @@ done so (for now).
 ### Facts
 
 - `(F1)` The clipboard format seems to be just some base64url
-  ([RFC 4648 §5](https://tools.ietf.org/html/rfc4648#section-5)) encoded binary data.
+  ([RFC 4648 §5](https://tools.ietf.org/html/rfc4648#section-5)) encoded binary data but with a
+  different alphabet order (see `F6`).
 
 - `(F2)` The save data (in the XML files, also in class `SaveData`) is:
 
@@ -101,6 +102,18 @@ done so (for now).
   having a `SaveToString(List<SaveData.C> corners, List<SaveData.V> voxels)` method.
 
 - `(F5)` There is a `WorldMaster.GetSaveString` method but it's not been seen in logs.
+
+- `(F6)` I managed to debug the `TextSaveAlphabet.alphabetDict` and it is not strict base64url.
+   The alphabet is different! (An error? Maybe an attempt to obfuscate? Just no particular reason?)
+
+   ```
+   ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvxyzw0123456789_-
+   ```
+
+   Notice the out-of-order `w` and swapped `-`/`_`.
+
+   Also: internally it's just a bit field, so don't treat it as a byte buffer... which makes us not
+   need any padding!
 
 ### Musings
 

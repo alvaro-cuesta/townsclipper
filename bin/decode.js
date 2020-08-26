@@ -1,5 +1,4 @@
 const { decodeSaveString } = require('../lib/codec')
-const { getBufferBits } = require('../lib/binary')
 
 // Accepts an arbitrary number of arguments and joins them into a save string
 const arguments = process.argv.slice(2)
@@ -13,8 +12,7 @@ const saveString = arguments.join('')
 
 // Decode into a bit string and print
 try {
-  const buffer = decodeSaveString(saveString)
-  const bitString = getBufferBits(buffer)
+  const bitString = decodeSaveString(saveString)
 
   process.stdout.write(bitString)
   process.stdout.write('\n')
