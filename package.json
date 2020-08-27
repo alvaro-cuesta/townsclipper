@@ -6,6 +6,8 @@
   "scripts": {
     "all": "node ./bin/all.js",
     "encode": "node ./bin/encode.js",
-    "decode": "node ./bin/decode.js"
+    "decode": "node ./bin/decode.js",
+    "annotate": "node ./bin/annotate.js",
+    "decode-annotate": "node ./bin/decode-annotate.js"
   }
 }

@@ -1,5 +1,6 @@
 const fs = require('fs')
 const { decodeSaveString } = require('../lib/codec')
+const { annotateBitString } = require('../lib/format')
 
 fs.rmdirSync('./out/', { recursive: true })
 fs.mkdirSync('./out/')
@@ -20,10 +21,16 @@ const entry = (comment, saveString) => {
   all.write(saveString)
   all.write('\n')
 
-  const bits = decodeSaveString(saveString)
-  file.write(bits)
+  const bitString = decodeSaveString(saveString)
+  file.write(bitString)
   file.write('\n')
-  all.write(bits)
+  all.write(bitString)
+  all.write('\n')
+
+  const annotatedString = annotateBitString(bitString)
+  file.write(annotatedString)
+  file.write('\n')
+  all.write(annotatedString)
   all.write('\n')
 
   file.close()
