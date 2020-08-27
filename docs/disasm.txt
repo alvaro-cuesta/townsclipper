@@ -147,6 +147,9 @@ while (get_read_index() < local_88 /* input len bits? */ ) {
         }
 
         *(undefined8 *)(lVar6 + 0x38) = uVar7;
+
+        throw ERR_INVALID_VOXEL_VAL(lVar6)
+
         uVar7 = System.String$$Format(STR_LIT_ERR_INVALID_VOXEL_VAL,lVar6,0);
         UnityEngine.Debug$$LogError(uVar7,0);
         in_RAX = Os.Utils.DictPoolExtension$$ReturnToPool<int,-int>(typeList, Method$Os.Utils.ListPoolExtension.ReturnToPool<int>());
