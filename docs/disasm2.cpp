@@ -100,28 +100,24 @@ ulonglong Placemaker.TextSaveSystem$$LoadFromString
   if (readCount + typeCount * 4 > uVar12)
     throw ERR_NO_ROOM_TYPES
 
-  int iVar17 = (int)(typeCount & 0xffffffff);
-
   longlong typeList = new List<Int>(typeCount)
-  if (typeList == NULL)
-    throw NULL_POINTER
 
   int i = 0;
-  if (0 < iVar17) {
+  if (0 < typeCount) {
     do {
       uint typeValue = reader.read(this.bitArray, &readCount, 4);
       typeList.push(typeValue)
       i = i + 1;
-    } while (i < iVar17);
+    } while (i < typeCount);
   }
 
   uint uVar16 = 0;
-  if (0 < iVar17 + 1) {
+  if (0 < typeCount + 1) {
     uVar5 = 1;
     do {
       uVar16 = uVar16 + 1;
       uVar5 = uVar5 << 1 | (uint)((int)uVar5 < 0);
-    } while ((int)uVar5 <= iVar17 + 1);
+    } while ((int)uVar5 <= typeCount + 1);
   }
 
   int iVar11 = (1 << ((byte)uVar16 & 0x1f)) + -1;
@@ -134,7 +130,7 @@ ulonglong Placemaker.TextSaveSystem$$LoadFromString
   uint local_80;
   ushort local_94;
   int iVar13;
-  byte bVar15;
+  byte bHeight;
 
   while (readCount < (int)local_88) {
     if (local_res8[0] == 0) {
@@ -157,59 +153,54 @@ ulonglong Placemaker.TextSaveSystem$$LoadFromString
     int local_1340 = reader.read(this.bitArray, &readCount, 1);
     if (local_1340 == 1) {
       local_94 = 0xf;
-      System.Collections.Generic.List<ByteFloat2>$$Add
-                (voxelList,0xf,Method$System.Collections.Generic.List<SaveData.V>.Add());
+      System.Collections.Generic.List<ByteFloat2>$$Add(voxelList, 0xf, Method$System.Collections.Generic.List<SaveData.V>.Add());
       iVar13 = 1;
     }
 
-    bVar15 = 1;
+    bHeight = 1;
+
     while( true ) {
       int local_1341 = reader.read(this.bitArray, &readCount, (ulonglong)uVar16);
-      if (local_1341 == iVar11) break;
+
+      if (local_1341 == iVar11)
+        break
+
       if (local_1341 != 0) {
         uVar5 = local_1341 - 1;
-        if ((iVar17 <= (int)uVar5) || ((int)uVar5 < 0)) {
-          longlong lVar8 = FUN_180110580(object[]_TypeInfo, 4);
 
-          if (lVar8 == NULL)
-            throw ERR_NULL_POINTER
+        if ((typeCount <= (int)uVar5) || ((int)uVar5 < 0)) {
+          local_res8[0] = bHeight;
 
-          code *pcVar1;
-          undefined8 uVar9;
-
-          local_80 = uVar5;
-          lVar8.push<int>(local_80)
-
-          local_84 = iVar17;
-          lVar8.push<int>(local_84)
-
-          local_res8[0] = bVar15;
-          lVar8.push<byte>(local_res8)
-
-          local_70 = local_68;
-          lVar8.push<Unity.Mathematics.int2_TypeInfo>(local_70)
-
-          throw System.String$$Format("Invalid voxel value {0}/{1} at {2} {3}", lVar8)
+          throw "Invalid voxel value {0}/{1} at {2} {3}".format(
+            <int>(uVar5),
+            <int>(typeCount),
+            <byte>(local_res8),
+            <Unity.Mathematics.int2>(local_68),
+          )
         }
 
-        local_94 = local_94 & 0xff | (ushort)bVar15 << 8;
+        local_94 = local_94 & 0xff | (ushort)bHeight << 8;
         byte bVar3 = FUN_180002290(typeList, (ulonglong)uVar5, Method$System.Collections.Generic.List<int>.get_Item());
         local_94 = local_94 & 0xff00 | (ushort)bVar3;
         System.Collections.Generic.List<ByteFloat2>$$Add(voxelList, (ulonglong)local_94);
 
         iVar13 = iVar13 + 1;
         iVar11 = local_7c;
-        if (bVar15 == 0xff) break;
+
+        if (bHeight == 0xff)
+          break
       }
-      bVar15 = bVar15 + 1;
+
+      bHeight = bHeight + 1;
     }
+
     iVar10 = local_8c;
     uint uStack92 = local_80; // unused?
     int local_60 = local_8c; // unused?
     int local_40 = iVar13;  // unused?
 
-    undefined8 local_48 = CONCAT44(local_80,local_8c);
-    System.Collections.Generic.List<SaveData.C>$$Add(cornerList,&local_48);
+    undefined8 local_48 = CONCAT44(local_80, local_8c);
+    System.Collections.Generic.List<SaveData.C>$$Add(cornerList, &local_48);
   }
 
   return true
