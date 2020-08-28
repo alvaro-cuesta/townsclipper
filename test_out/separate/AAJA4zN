@@ -2,11 +2,8 @@
 AAJA4zN
 001101110010111000000000001001000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 4,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     0
   ],

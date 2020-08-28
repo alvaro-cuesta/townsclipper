@@ -45,8 +45,6 @@ should work if you prefer it.
   http://scriptology.de/townscaper.html might have the full list of corners, but I'd rather
   understand the algorithm.
 
-- Maybe remove IR bit lengths? Implicit in values.
-
 - Decode IR into a corners + voxels data structure.
 
 - Encode from corners + voxels back into IR.

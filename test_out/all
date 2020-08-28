@@ -2,11 +2,8 @@
 AAAG
 000110000000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [],
   "corners": [
     {
@@ -25,9 +22,6 @@ AAAG
 FAAmhB
 000001100001100110000000000000000101
 {
-  "posBitLength": 5,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
   "xInitial": 0,
   "yInitial": 9,
   "types": [],
@@ -48,9 +42,6 @@ FAAmhB
 FAIDhB
 000001100001000011001000000000000101
 {
-  "posBitLength": 5,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
   "xInitial": 9,
   "yInitial": 0,
   "types": [],
@@ -71,11 +62,8 @@ FAIDhB
 AAIAN
 001101000000001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     0
   ],
@@ -98,11 +86,8 @@ AAIAN
 AAICN
 001101000010001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     1
   ],
@@ -125,11 +110,8 @@ AAICN
 AAIcN
 001101011100001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     14
   ],
@@ -152,11 +134,8 @@ AAIcN
 AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN
 001101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     0
   ],
@@ -428,11 +407,8 @@ AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN
 001101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011100001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     14
   ],
@@ -704,11 +680,8 @@ AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0
 110100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011100001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     14
   ],
@@ -981,11 +954,8 @@ AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQD
 000011010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011100001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     14
   ],
@@ -1259,11 +1229,8 @@ AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN
 001101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011100001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     14
   ],
@@ -1538,11 +1505,8 @@ AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAIgN
 001101100000001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     0
   ],
@@ -1565,11 +1529,8 @@ AAIgN
 AAIiN
 001101100010001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     1
   ],
@@ -1592,11 +1553,8 @@ AAIiN
 AAIkN
 001101100100001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     2
   ],
@@ -1619,11 +1577,8 @@ AAIkN
 AAImN
 001101100110001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     3
   ],
@@ -1646,11 +1601,8 @@ AAImN
 AAIg0
 110100100000001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     0
   ],
@@ -1674,11 +1626,8 @@ AAIg0
 AAIi0
 110100100010001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     1
   ],
@@ -1702,11 +1651,8 @@ AAIi0
 AAI60
 110100111010001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     13
   ],
@@ -1730,11 +1676,8 @@ AAI60
 AAI80
 110100111100001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     14
   ],
@@ -1758,11 +1701,8 @@ AAI80
 AAIgQD
 000011010000100000001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     0
   ],
@@ -1787,11 +1727,8 @@ AAIgQD
 AAI8QD
 000011010000111100001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     14
   ],
@@ -1816,11 +1753,8 @@ AAI8QD
 AAIgAN
 001101000000100000001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     0
   ],
@@ -1846,11 +1780,8 @@ AAIgAN
 AAI8AN
 001101000000111100001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     14
   ],
@@ -1876,9 +1807,6 @@ AAI8AN
 FAAmDYD
 000011011000000011100110000000000000000101
 {
-  "posBitLength": 5,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
   "xInitial": 0,
   "yInitial": 9,
   "types": [
@@ -1903,9 +1831,6 @@ FAAmDYD
 FAAmjYD
 000011011000100011100110000000000000000101
 {
-  "posBitLength": 5,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
   "xInitial": 0,
   "yInitial": 9,
   "types": [
@@ -1930,9 +1855,6 @@ FAAmjYD
 FAAmDZD
 000011011001000011100110000000000000000101
 {
-  "posBitLength": 5,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
   "xInitial": 0,
   "yInitial": 9,
   "types": [
@@ -1957,9 +1879,6 @@ FAAmDZD
 FAAmjZD
 000011011001100011100110000000000000000101
 {
-  "posBitLength": 5,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
   "xInitial": 0,
   "yInitial": 9,
   "types": [
@@ -1984,9 +1903,6 @@ FAAmjZD
 FAAmDaD
 000011011010000011100110000000000000000101
 {
-  "posBitLength": 5,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
   "xInitial": 0,
   "yInitial": 9,
   "types": [
@@ -2011,9 +1927,6 @@ FAAmDaD
 FAAmjaD
 000011011010100011100110000000000000000101
 {
-  "posBitLength": 5,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
   "xInitial": 0,
   "yInitial": 9,
   "types": [
@@ -2038,9 +1951,6 @@ FAAmjaD
 FAAmDbD
 000011011011000011100110000000000000000101
 {
-  "posBitLength": 5,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
   "xInitial": 0,
   "yInitial": 9,
   "types": [
@@ -2065,9 +1975,6 @@ FAAmDbD
 FAAmjbD
 000011011011100011100110000000000000000101
 {
-  "posBitLength": 5,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
   "xInitial": 0,
   "yInitial": 9,
   "types": [
@@ -2092,9 +1999,6 @@ FAAmjbD
 FAAmDfD
 000011011111000011100110000000000000000101
 {
-  "posBitLength": 5,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
   "xInitial": 0,
   "yInitial": 9,
   "types": [
@@ -2119,11 +2023,8 @@ FAAmDfD
 AABglD
 000011100101100000000001000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 4,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [],
   "corners": [
     {
@@ -2149,11 +2050,8 @@ AABglD
 AAJA4zN
 001101110010111000000000001001000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 4,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     0
   ],
@@ -2183,11 +2081,8 @@ AAJA4zN
 AAJC4zN
 001101110010111000000010001001000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 4,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     1
   ],

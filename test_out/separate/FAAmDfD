@@ -2,9 +2,6 @@
 FAAmDfD
 000011011111000011100110000000000000000101
 {
-  "posBitLength": 5,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
   "xInitial": 0,
   "yInitial": 9,
   "types": [

@@ -2,9 +2,6 @@
 FAIDhB
 000001100001000011001000000000000101
 {
-  "posBitLength": 5,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
   "xInitial": 9,
   "yInitial": 0,
   "types": [],

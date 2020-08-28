@@ -2,11 +2,8 @@
 AAI8QD
 000011010000111100001000000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
     14
   ],

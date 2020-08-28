@@ -1,15 +1,11 @@
 (0, 0, 1) -> (14, 1
-
-AAIcN
-001101011100001000000000000000
+AAAIc
+000110101110000100000000000000
 {
-  "posBitLength": 0,
-  "xDeltaBitLength": 0,
-  "yOffsetBitLength": 0,
-  "xInitial": null,
-  "yInitial": null,
+  "xInitial": 0,
+  "yInitial": 0,
   "types": [
-    14
+    1
   ],
   "corners": [
     {
@@ -23,5 +19,6 @@ AAIcN
     }
   ]
 }
-"<00> | 11 01 (g?0) | <1110 (0001)> <+y=00000[O] dx=00000[O] po=00000[O]>"
-AAIcN
+"<00> | 11 01 (g?0) | <0001 (0001)> <+y=00000[O] dx=00000[O] po=00000[O]>"
+AAICN
+N
