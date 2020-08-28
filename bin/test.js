@@ -1,5 +1,5 @@
 const fs = require('fs')
-const { saveStringToBitString, bitStringToSaveString } = require('../lib/codec')
+const { saveStringToBitString, bitStringToSaveString } = require('../lib/savestring')
 const { bitStringToIR, irToBitString } = require('../lib/ir')
 const { irToCorners } = require('../lib/corners')
 const { cleanBitString } = require('../lib/util')
@@ -107,5 +107,7 @@ entry('(0, 9, 2) -> (15, 0), (14, 1)', 'FAAmDfD')
 entry('(0, 0, 1) -> (15, 0); (0, 9, 1) -> (15, 0)', 'AABglD')
 entry('(0, 0, 1) -> (15, 0); (0, 9, 2) -> (15, 0), (0, 1)', 'AAJA4zN')
 entry('(0, 0, 1) -> (15, 0); (0, 9, 2) -> (15, 0), (1, 1)', 'AAJC4zN')
+
+entry('Full color column', 'GAYv4hQGqsDTd52HEDSycQJ1i1cvP')
 
 all.close()

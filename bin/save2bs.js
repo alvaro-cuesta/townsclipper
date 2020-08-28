@@ -1,5 +1,5 @@
 const fs = require('fs')
-const { saveStringToBitString } = require('../lib/codec')
+const { saveStringToBitString } = require('../lib/savestring')
 const { cleanSaveString } = require('../lib/util')
 
 const saveString = cleanSaveString(fs.readFileSync(process.stdin.fd, 'utf-8'))
