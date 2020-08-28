@@ -27,29 +27,29 @@ Townscaper clipboard data format converter.
   - Corner positions are represented as deltas (`x`) and offsets (`y`).
   - Voxels are represented as a dense array of types (column in that corner) from lowest to highest.
 
-  ```ts
-  type IR = {
-    // The initial X and Y coordinates from corners.
-    xInitial: number,
-    yInitial: number,
-    // Up to 15 colors. Absolute voxel types (0 = red, 14 = white, 15 = ground).
-    // This is used as a lookup table later in corner's `voxels`.
-    types: number[],
-    // See below.
-    corners: Corner[],
-  }
+   ```ts
+   type IR = {
+     // The initial X and Y coordinates from corners.
+     xInitial: number,
+     yInitial: number,
+     // Up to 15 colors. Absolute voxel types (0 = red, 14 = white, 15 = ground).
+     // This is used as a lookup table later in IRCorner's `voxels`.
+     types: number[],
+     // See below.
+     corners: IRCorner[],
+   }
 
-  type IRCorner =  {
-    // How much to advance `X` from last corner. Must be `null` on the first `Corner`.
-    xDelta: number | null,
-    // yPosition = yInitial + yOffset.
-    yOffset: 0,
-    // Whether this corner's column has a ground voxel.
-    hasGround: true,
-    // Index in `types` lookup table. `-1` for empty.
-    voxels: number[],
-  }
-  ```
+   type IRCorner =  {
+     // How much to advance `X` from last corner. Must be `null` on the first `Corner`.
+     xDelta: number | null,
+     // yPosition = yInitial + yOffset.
+     yOffset: 0,
+     // Whether this corner's column has a ground voxel.
+     hasGround: true,
+     // Index in `types` lookup table. `-1` for empty.
+     voxels: number[],
+   }
+   ```
 
 - **Scape files:** Towns as stored in disk, in plain XML format. In Windows they are stored as a
   bunch of `Town*.scape` files in `%appdata%\..\LocalLow\Oskar Stalberg\Townscaper\` (i.e.
@@ -62,17 +62,17 @@ Townscaper clipboard data format converter.
 
 - **Sparse:** JSON representation with voxels in sparse form (similar to Scape files).
 
-  ```ts
-  type Sparse = SparseCorner[]
+   ```ts
+   type Sparse = SparseCorner[]
 
-  type SparseCorner = {
-    // Absolute position
-    x: number,
-    y: number,
-    // Map from height (0 = ground) to absolute voxel type (0 = red, 14 = white, 15 = ground)
-    voxels: { [k: number] : number},
-  }
-  ```
+   type SparseCorner = {
+     // Absolute position
+     x: number,
+     y: number,
+     // Map from height (0 = ground) to absolute voxel type (0 = red, 14 = white, 15 = ground)
+     voxels: { [k: number] : number},
+   }
+   ```
 
 ## Commands
 
