@@ -1,7 +1,7 @@
 const fs = require('fs')
 const { saveStringToBitString, bitStringToSaveString } = require('../lib/savestring')
 const { bitStringToIR, irToBitString } = require('../lib/ir')
-const { irToCorners } = require('../lib/corners')
+const { irToSparse, sparseToIR } = require('../lib/sparse')
 const { cleanBitString } = require('../lib/util')
 
 fs.rmdirSync('./test_out/', { recursive: true })
@@ -36,14 +36,19 @@ const entry = (comment, saveString) => {
   fs.writeFileSync(allPath, irString, { flag: 'a' })
   fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
-  const corners = irToCorners(ir)
-  const cornersString = JSON.stringify(corners, null, 2)
-  fs.writeFileSync(filePath, cornersString, { flag: 'a' })
+  const sparse = irToSparse(ir)
+  const sparseString = JSON.stringify(sparse, null, 2)
+  fs.writeFileSync(filePath, sparseString, { flag: 'a' })
   fs.writeFileSync(filePath, '\n', { flag: 'a' })
-  fs.writeFileSync(allPath, cornersString, { flag: 'a' })
+  fs.writeFileSync(allPath, sparseString, { flag: 'a' })
   fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
-  // TODO: Corners to IR
+  const irFromSparse = sparseToIR(sparse)
+  const irFromSparseString = JSON.stringify(irFromSparse, null, 2)
+  fs.writeFileSync(filePath, irFromSparseString, { flag: 'a' })
+  fs.writeFileSync(filePath, '\n', { flag: 'a' })
+  fs.writeFileSync(allPath, irFromSparseString, { flag: 'a' })
+  fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
   const annotatedBitString = irToBitString(ir)
   fs.writeFileSync(filePath, annotatedBitString, { flag: 'a' })
@@ -51,7 +56,13 @@ const entry = (comment, saveString) => {
   fs.writeFileSync(allPath, annotatedBitString, { flag: 'a' })
   fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
-  const roundtripSaveString = bitStringToSaveString(cleanBitString(annotatedBitString))
+  const annotatedBitStringFromCorners = irToBitString(irFromSparse)
+  fs.writeFileSync(filePath, annotatedBitStringFromCorners, { flag: 'a' })
+  fs.writeFileSync(filePath, '\n', { flag: 'a' })
+  fs.writeFileSync(allPath, annotatedBitStringFromCorners, { flag: 'a' })
+  fs.writeFileSync(allPath, '\n', { flag: 'a' })
+
+  const roundtripSaveString = bitStringToSaveString(cleanBitString(annotatedBitStringFromCorners))
   fs.writeFileSync(filePath, roundtripSaveString, { flag: 'a' })
   fs.writeFileSync(filePath, '\n', { flag: 'a' })
   fs.writeFileSync(allPath, roundtripSaveString, { flag: 'a' })
