@@ -30,5 +30,24 @@ AAI8QD
     }
   }
 ]
+{
+  "xInitial": 0,
+  "yInitial": 0,
+  "types": [
+    14
+  ],
+  "corners": [
+    {
+      "xDelta": null,
+      "yOffset": 0,
+      "hasGround": true,
+      "voxels": [
+        -1,
+        -1
+      ]
+    }
+  ]
+}
 "<0000> | 11 01 00 00 (g?1) | <1110 (0001)> <+y=00000[O] dx=00000[O] po=00000[O]>"
-AAI8QD
+"11 00 00 (g?1) | <1110 (0001)> <+y=00000[O] dx=00000[O] po=00000[O]>"
+AAI8x

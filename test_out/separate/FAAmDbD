@@ -28,5 +28,21 @@ FAAmDbD
     }
   }
 ]
+{
+  "xInitial": 0,
+  "yInitial": 9,
+  "types": [
+    6
+  ],
+  "corners": [
+    {
+      "xDelta": null,
+      "yOffset": -9,
+      "hasGround": true,
+      "voxels": []
+    }
+  ]
+}
 "<0000> | 11 01 (g?1) | <0110 (0001)> <y=11001[9] x=10000[O]> <+y=00000[O] dx=00000[O] po=00101[5]>"
-FAAmDbD
+"11 (g?1) | <0110 (0001)> <y=11001[9] x=10000[O]> <+y=00000[O] dx=00000[O] po=00101[5]>"
+FAAmD7

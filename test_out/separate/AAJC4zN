@@ -41,5 +41,27 @@ AAJC4zN
     }
   }
 ]
+{
+  "xInitial": 0,
+  "yInitial": 0,
+  "types": [
+    1
+  ],
+  "corners": [
+    {
+      "xDelta": null,
+      "yOffset": 0,
+      "hasGround": true,
+      "voxels": []
+    },
+    {
+      "xDelta": 0,
+      "yOffset": 0,
+      "hasGround": true,
+      "voxels": []
+    }
+  ]
+}
 "<00> | 11 01 (g?1) (+y1001[9]) (dx?0) | 11 (g?1) (+y0000[O]) | <0001 (0001)> <+y=00100[4] dx=00000[O] po=00000[O]>"
-AAJC4zN
+"11 (g?1) (dx?0) | 11 (g?1) | <0001 (0001)> <+y=00000[O] dx=00000[O] po=00000[O]>"
+AAIi7

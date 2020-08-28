@@ -28,5 +28,21 @@ AAImN
     }
   }
 ]
+{
+  "xInitial": 0,
+  "yInitial": 0,
+  "types": [
+    3
+  ],
+  "corners": [
+    {
+      "xDelta": null,
+      "yOffset": 0,
+      "hasGround": true,
+      "voxels": []
+    }
+  ]
+}
 "<00> | 11 01 (g?1) | <0011 (0001)> <+y=00000[O] dx=00000[O] po=00000[O]>"
-AAImN
+"<0000> | 11 (g?1) | <0011 (0001)> <+y=00000[O] dx=00000[O] po=00000[O]>"
+AAImD

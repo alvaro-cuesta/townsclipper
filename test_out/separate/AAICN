@@ -1,5 +1,51 @@
-(0, 0, 1) -> (14, 1
-
+(0, 0, 1) -> (2, 1)
+AAICN
+001101000010001000000000000000
+{
+  "xInitial": 0,
+  "yInitial": 0,
+  "types": [
+    1
+  ],
+  "corners": [
+    {
+      "xDelta": null,
+      "yOffset": 0,
+      "hasGround": false,
+      "voxels": [
+        0
+      ]
+    }
+  ]
+}
+[
+  {
+    "x": 0,
+    "y": 0,
+    "voxels": {
+      "1": 1
+    }
+  }
+]
+{
+  "xInitial": 0,
+  "yInitial": 0,
+  "types": [
+    1
+  ],
+  "corners": [
+    {
+      "xDelta": null,
+      "yOffset": 0,
+      "hasGround": false,
+      "voxels": []
+    }
+  ]
+}
+"<00> | 11 01 (g?0) | <0001 (0001)> <+y=00000[O] dx=00000[O] po=00000[O]>"
+"<0000> | 11 (g?0) | <0001 (0001)> <+y=00000[O] dx=00000[O] po=00000[O]>"
+AAICD
+(0, 0, 1) -> (14, 1)
 AAIcN
 001101011100001000000000000000
 {
@@ -28,5 +74,21 @@ AAIcN
     }
   }
 ]
+{
+  "xInitial": 0,
+  "yInitial": 0,
+  "types": [
+    14
+  ],
+  "corners": [
+    {
+      "xDelta": null,
+      "yOffset": 0,
+      "hasGround": false,
+      "voxels": []
+    }
+  ]
+}
 "<00> | 11 01 (g?0) | <1110 (0001)> <+y=00000[O] dx=00000[O] po=00000[O]>"
-AAIcN
+"<0000> | 11 (g?0) | <1110 (0001)> <+y=00000[O] dx=00000[O] po=00000[O]>"
+AAIcD
