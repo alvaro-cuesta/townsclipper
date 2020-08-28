@@ -117,19 +117,29 @@ You can chain several commands into a pipeline. For example:
 1. **Inspect a save string as IR**
 
    ```sh
-   echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir
+   echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir --pretty
    ```
 
 2. **Inspect a save string as sparse**
 
    ```sh
-   echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir | node bin/ir2sparse
+   echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir | node bin/ir2sparse --pretty
    ```
 
 3. **Replace red blocks with blue**
 
    ```sh
    echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir | sed 's/"types":\[0]/"types":\[9]/' | node bin/ir2bs | node bin/bs2save
+   ```
+
+4. **Edit savestring data in Vim**
+
+   ```sh
+   tmpfile=$(mktemp) &&
+   echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir | node bin/ir2sparse --pretty > $tmpfile &&
+   vim $tmpfile &&
+   cat $tmpfile | node bin/sparse2ir | node bin/ir2bs | node bin/bs2save &&
+   rm $tmpfile
    ```
 
 Or you can programatically use it as a library (both NodeJS and browser via bundler should work).
