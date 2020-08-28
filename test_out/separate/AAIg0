@@ -1,0 +1,27 @@
+(0, 0, 2) -> (15, 0), (0, 2)
+AAIg0
+110100100000001000000000000000
+{
+  "posBitLength": 0,
+  "xDeltaBitLength": 0,
+  "yOffsetBitLength": 0,
+  "xInitial": null,
+  "yInitial": null,
+  "types": [
+    0
+  ],
+  "corners": [
+    {
+      "isMoveX": null,
+      "xDelta": null,
+      "yOffset": null,
+      "hasGround": true,
+      "voxels": [
+        -1,
+        0
+      ]
+    }
+  ]
+}
+"11 01 00 (g?1) | <0000 (0001)> <+y=00000[O] dx=00000[O] po=00000[O]>"
+AAIg0

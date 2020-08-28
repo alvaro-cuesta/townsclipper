@@ -14,17 +14,24 @@ contain each town. These are plain XML files. Chris Love has [a great writeup](h
 Assumes Node.js (latest LTS should work) and NPM/Yarn are installed. I will assume Yarn but NPM
 should work if you prefer it.
 
-- `yarn all`: Outputs a test set into the `out` folder.
-- `yarn encode <bit string>`: Encodes a bit string into a save string that Townscaper can load.
+- `yarn all`: Outputs a test set into the `test_out` folder.
+- `echo <save string> | node bin/save2bs`: Decodes a save string into a bit string. Ignores non-base64
+  characters.
+- `echo <bit string> | node bin/bs2save`: Encodes a bit string into a save string that Townscaper can load.
   Ignores non-0/1 characters, but the final string must be a multiple of 6 bits (i.e., base-64
   characters).
 
   **TODO:** Maybe automatically pad?
-- `yarn decode <save string>`: Decodes a save string into a bit string. Ignores non-base64
-  characters.
-- `yarn annotate <bit string>`: Annotates a bit string with save information. Ignores non-0/1
-  characters.
-- `yarn decode-annotate <save string>`: `decode` + `annotate`
+- `echo <bit string> | node bin/bs2ir`: Transforms a bit string into Intermediate Representation,
+  a JSON representation of that bit string. Pretty close to the raw deal but more readable and easier
+  to edit.
+
+  Ignores non-0/1 characters, but the final string must be a multiple of 6 bits (i.e., base-64
+  characters).
+
+  **TODO:** Maybe automatically pad?
+- `echo <ir json> | node bin/ir2bs`: Transform Intermediate Representation JSON into its equivalent bit
+  string.
 
 ## Documentation
 
@@ -42,15 +49,11 @@ Everything else is (un)documented in the code itself.
   http://scriptology.de/townscaper.html might have the full list of corners, but I'd rather
   understand the algorithm.
 
-- En/decode into an intermediate representation (JSON) close to the bit string.
+- Decode IR into a corners + voxels data structure.
 
-- Decode into a corners + voxels data structure.
+- Encode from corners + voxels back into IR.
 
-- Encode from corners + voxels back into data string.
-
-- Errors and/or leniency on invalid input.
-
-- Maybe use STDIO for input? Yarn adds crap into STDOUT so it's not pipe-friendly :/
+- Usage examples on README
 
 - Post to:
 
