@@ -8,6 +8,7 @@ const bitString = cleanBitString(fs.readFileSync(process.stdin.fd, 'utf-8'))
 
 const ir = bitStringToIR(bitString)
 
-// TODO: Pretty flag
-process.stdout.write(JSON.stringify(ir, null, 2))
+const indent = process.argv[2] === '--pretty' ? 2 : undefined
+
+process.stdout.write(JSON.stringify(ir, null, indent))
 process.stdout.write('\n')
