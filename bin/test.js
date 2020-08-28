@@ -8,61 +8,60 @@ fs.rmdirSync('./test_out/', { recursive: true })
 fs.mkdirSync('./test_out/')
 fs.mkdirSync('./test_out/separate/')
 
-const all = fs.createWriteStream('./test_out/all')
+const allPath = './test_out/all'
 
 const entry = (comment, saveString) => {
-  const file = fs.createWriteStream('./test_out/separate/' + saveString)
+  const filePath = './test_out/separate/' + saveString
 
-  file.write(comment)
-  file.write('\n')
-  all.write(comment)
-  all.write('\n')
+  fs.writeFileSync(filePath, comment, { flag: 'a' })
+  fs.writeFileSync(filePath, '\n', { flag: 'a' })
+  fs.writeFileSync(allPath, comment, { flag: 'a' })
+  fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
-  file.write(saveString)
-  file.write('\n')
-  all.write(saveString)
-  all.write('\n')
+  fs.writeFileSync(filePath, saveString, { flag: 'a' })
+  fs.writeFileSync(filePath, '\n', { flag: 'a' })
+  fs.writeFileSync(allPath, saveString, { flag: 'a' })
+  fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
   const bitString = saveStringToBitString(saveString)
-  file.write(bitString)
-  file.write('\n')
-  all.write(bitString)
-  all.write('\n')
+  fs.writeFileSync(filePath, bitString, { flag: 'a' })
+  fs.writeFileSync(filePath, '\n', { flag: 'a' })
+  fs.writeFileSync(allPath, bitString, { flag: 'a' })
+  fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
   const ir = bitStringToIR(bitString)
   const irString = JSON.stringify(ir, null, 2)
-  file.write(irString)
-  file.write('\n')
-  all.write(irString)
-  all.write('\n')
+  fs.writeFileSync(filePath, irString, { flag: 'a' })
+  fs.writeFileSync(filePath, '\n', { flag: 'a' })
+  fs.writeFileSync(allPath, irString, { flag: 'a' })
+  fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
   const corners = irToCorners(ir)
   const cornersString = JSON.stringify(corners, null, 2)
-  file.write(cornersString)
-  file.write('\n')
-  all.write(cornersString)
-  all.write('\n')
+  fs.writeFileSync(filePath, cornersString, { flag: 'a' })
+  fs.writeFileSync(filePath, '\n', { flag: 'a' })
+  fs.writeFileSync(allPath, cornersString, { flag: 'a' })
+  fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
   // TODO: Corners to IR
 
   const annotatedBitString = irToBitString(ir)
-  file.write(annotatedBitString)
-  file.write('\n')
-  all.write(annotatedBitString)
-  all.write('\n')
+  fs.writeFileSync(filePath, annotatedBitString, { flag: 'a' })
+  fs.writeFileSync(filePath, '\n', { flag: 'a' })
+  fs.writeFileSync(allPath, annotatedBitString, { flag: 'a' })
+  fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
   const roundtripSaveString = bitStringToSaveString(cleanBitString(annotatedBitString))
-  file.write(roundtripSaveString)
-  file.write('\n')
-  all.write(roundtripSaveString)
-  all.write('\n')
+  fs.writeFileSync(filePath, roundtripSaveString, { flag: 'a' })
+  fs.writeFileSync(filePath, '\n', { flag: 'a' })
+  fs.writeFileSync(allPath, roundtripSaveString, { flag: 'a' })
+  fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
   if (roundtripSaveString !== saveString) {
     console.error(`SaveString ${saveString} didn't roundtrip properly`)
   }
 
-  file.close()
-  all.write('---\n')
+  fs.writeFileSync(allPath, '---\n', { flag: 'a' })
 }
 
 entry('(0, 0, 1) -> (15, 0)', 'AAAG')
@@ -109,5 +108,3 @@ entry('(0, 0, 1) -> (15, 0); (0, 9, 2) -> (15, 0), (0, 1)', 'AAJA4zN')
 entry('(0, 0, 1) -> (15, 0); (0, 9, 2) -> (15, 0), (1, 1)', 'AAJC4zN')
 
 entry('Full color column', 'GAYv4hQGqsDTd52HEDSycQJ1i1cvP')
-
-all.close()
