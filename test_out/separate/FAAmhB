@@ -30,7 +30,7 @@ FAAmhB
   "corners": [
     {
       "xDelta": null,
-      "yOffset": -9,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": []
     }

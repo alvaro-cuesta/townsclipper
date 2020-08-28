@@ -118,11 +118,6 @@ should work if you prefer it.
   http://scriptology.de/townscaper.html might have the full list of corners, but I'd rather
   understand the algorithm.
 
-- Make `sparseToIR` behave like it would on Townscaper. Currently `save -> bit -> ir -> sparse ->
-  ir -> bit -> save` not always roundtrips properly.
-
-  E.g.:
-
 - Usage examples on README
 
 - Post to:
