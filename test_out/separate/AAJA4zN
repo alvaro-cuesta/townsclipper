@@ -9,14 +9,12 @@ AAJA4zN
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": 0,
       "hasGround": true,
       "voxels": []
     },
     {
-      "isMoveX": false,
       "xDelta": null,
       "yOffset": 9,
       "hasGround": true,

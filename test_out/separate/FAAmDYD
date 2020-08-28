@@ -9,7 +9,6 @@ FAAmDYD
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,

@@ -7,7 +7,6 @@ AAAG
   "types": [],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -27,7 +26,6 @@ FAAmhB
   "types": [],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -47,7 +45,6 @@ FAIDhB
   "types": [],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -69,7 +66,6 @@ AAIAN
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": false,
@@ -93,7 +89,6 @@ AAICN
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": false,
@@ -117,7 +112,6 @@ AAIcN
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": false,
@@ -141,7 +135,6 @@ AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": false,
@@ -414,7 +407,6 @@ AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": false,
@@ -687,7 +679,6 @@ AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": false,
@@ -961,7 +952,6 @@ AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": false,
@@ -1236,7 +1226,6 @@ AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": false,
@@ -1512,7 +1501,6 @@ AAIgN
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1536,7 +1524,6 @@ AAIiN
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1560,7 +1547,6 @@ AAIkN
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1584,7 +1570,6 @@ AAImN
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1608,7 +1593,6 @@ AAIg0
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1633,7 +1617,6 @@ AAIi0
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1658,7 +1641,6 @@ AAI60
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1683,7 +1665,6 @@ AAI80
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1708,7 +1689,6 @@ AAIgQD
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1734,7 +1714,6 @@ AAI8QD
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1760,7 +1739,6 @@ AAIgAN
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1787,7 +1765,6 @@ AAI8AN
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1814,7 +1791,6 @@ FAAmDYD
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1838,7 +1814,6 @@ FAAmjYD
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1862,7 +1837,6 @@ FAAmDZD
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1886,7 +1860,6 @@ FAAmjZD
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1910,7 +1883,6 @@ FAAmDaD
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1934,7 +1906,6 @@ FAAmjaD
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1958,7 +1929,6 @@ FAAmDbD
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -1982,7 +1952,6 @@ FAAmjbD
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -2006,7 +1975,6 @@ FAAmDfD
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
@@ -2028,14 +1996,12 @@ AABglD
   "types": [],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": 0,
       "hasGround": true,
       "voxels": []
     },
     {
-      "isMoveX": false,
       "xDelta": null,
       "yOffset": 9,
       "hasGround": true,
@@ -2057,14 +2023,12 @@ AAJA4zN
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": 0,
       "hasGround": true,
       "voxels": []
     },
     {
-      "isMoveX": false,
       "xDelta": null,
       "yOffset": 9,
       "hasGround": true,
@@ -2088,14 +2052,12 @@ AAJC4zN
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": 0,
       "hasGround": true,
       "voxels": []
     },
     {
-      "isMoveX": false,
       "xDelta": null,
       "yOffset": 9,
       "hasGround": true,

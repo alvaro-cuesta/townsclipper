@@ -9,7 +9,6 @@ AAI60
   ],
   "corners": [
     {
-      "isMoveX": null,
       "xDelta": null,
       "yOffset": null,
       "hasGround": true,
