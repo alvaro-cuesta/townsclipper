@@ -81,7 +81,7 @@ should work if you prefer it.
 
 - `yarn all`: Outputs a test set into the `test_out` folder.
 
-- `echo <save string> | node bin/save2bsnode `: Decodes a save string into a bit string. Ignores non-base64
+- `echo <save string> | node bin/save2bs`: Decodes a save string into a bit string. Ignores non-base64
   characters.
 
   **TODO:** Maybe output without padding? Flag?
@@ -110,6 +110,31 @@ should work if you prefer it.
 
   **TODO:** Maybe automatically pad? Flag?
 
+## Examples
+
+You can chain several commands into a pipeline. For example:
+
+1. Inspect a save string as IR
+
+  ```sh
+  echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir
+  ```
+
+1. Inspect a save string as sparse
+
+  ```sh
+  echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir | node bin/ir2sparse
+  ```
+
+3. Replace red blocks with blue
+
+  ```sh
+  echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir | sed 's/"types":\[0]/"types":\[9]/' | node bin/ir2bs | node bin/bs2save
+  ```
+
+Or you can programatically use it as a library (both NodeJS and browser via bundler should work).
+See [`./lib/index.js`](./lib/index.js).
+
 ## To Do
 
 - The grid is irregular and we need it if we want to generate valid coordinates. Chris Love has
@@ -117,8 +142,6 @@ should work if you prefer it.
   ([Twitter thread](https://twitter.com/ChrisLuv/status/1280594189412073474)) and the code in
   http://scriptology.de/townscaper.html might have the full list of corners, but I'd rather
   understand the algorithm.
-
-- Usage examples on README
 
 - Post to:
 
