@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs')
 const { bitStringToIR } = require('../lib/ir')
 const { cleanBitString } = require('../lib/util')

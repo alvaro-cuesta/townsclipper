@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs')
 const { saveStringToBitString } = require('../lib/savestring')
 const { cleanSaveString } = require('../lib/util')

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs')
 const { saveStringToBitString, bitStringToSaveString } = require('../lib/savestring')
 const { bitStringToIR, irToBitString } = require('../lib/ir')
