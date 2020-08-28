@@ -1,17 +1,20 @@
 {
-  "name": "townscaper",
+  "name": "townscaper-clipboard",
   "version": "0.0.1",
-  "main": "index.js",
+  "description": "Townscaper clipboard data format converter",
+  "keywords": ["townscaper", "clipboard", "converter"],
+  "homepage": "https://github.com/alvaro-cuesta/townscaper-clipboard#readme",
+  "bugs": "https://github.com/alvaro-cuesta/townscaper-clipboard/issues",
   "license": "MIT",
-  "scripts": {
-    "test": "node ./bin/test.js"
+  "author": "Álvaro Cuesta (https://github.com/alvaro-cuesta/)",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "bin": "bin",
+    "test": "test"
   },
-  "bin": {
-    "save2bs": "bin/save2bs.js",
-    "bs2ir": "bin/bs2ir.js",
-    "ir2sparse": "bin/ir2sparse.js",
-    "sparse2ir": "bin/sparse2ir.js",
-    "ir2bs": "bin/ir2bs.js",
-    "bs2save": "bin/bs2save.js"
+  "repository": "github:alvaro-cuesta/townscaper-clipboard",
+  "scripts": {
+    "test": "test/index.js"
   }
 }
