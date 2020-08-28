@@ -1,6 +1,7 @@
 const fs = require('fs')
 const { saveStringToBitString, bitStringToSaveString } = require('../lib/codec')
 const { bitStringToIR, irToBitString } = require('../lib/ir')
+const { irToCorners } = require('../lib/corners')
 const { cleanBitString } = require('../lib/util')
 
 fs.rmdirSync('./test_out/', { recursive: true })
@@ -28,13 +29,23 @@ const entry = (comment, saveString) => {
   all.write(bitString)
   all.write('\n')
 
-  const ir = JSON.stringify(bitStringToIR(bitString), null, 2)
-  file.write(ir)
+  const ir = bitStringToIR(bitString)
+  const irString = JSON.stringify(ir, null, 2)
+  file.write(irString)
   file.write('\n')
-  all.write(ir)
+  all.write(irString)
   all.write('\n')
 
-  const annotatedBitString = irToBitString(JSON.parse(ir))
+  const corners = irToCorners(ir)
+  const cornersString = JSON.stringify(corners, null, 2)
+  file.write(cornersString)
+  file.write('\n')
+  all.write(cornersString)
+  all.write('\n')
+
+  // TODO: Corners to IR
+
+  const annotatedBitString = irToBitString(ir)
   file.write(annotatedBitString)
   file.write('\n')
   all.write(annotatedBitString)

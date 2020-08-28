@@ -15,15 +15,18 @@ Assumes Node.js (latest LTS should work) and NPM/Yarn are installed. I will assu
 should work if you prefer it.
 
 - `yarn all`: Outputs a test set into the `test_out` folder.
+
 - `echo <save string> | node bin/save2bs`: Decodes a save string into a bit string. Ignores non-base64
   characters.
 
   **TODO:** Maybe automatically remove padding?
+
 - `echo <bit string> | node bin/bs2save`: Encodes a bit string into a save string that Townscaper can load.
   Ignores non-0/1 characters, but the final string must be a multiple of 6 bits (i.e., base-64
   characters).
 
   **TODO:** Maybe automatically pad?
+
 - `echo <bit string> | node bin/bs2ir`: Transforms a bit string into Intermediate Representation,
   a JSON representation of that bit string. Pretty close to the raw deal but more readable and easier
   to edit.
@@ -32,6 +35,10 @@ should work if you prefer it.
   characters).
 
   **TODO:** Maybe automatically pad?
+
+- `echo <ir json> | node bin/ir2corners`: Transform Intermediate Representation JSON into corners +
+  voxels structure, similar to how it's laid out in the `Town*.scape` XML files (see above).
+
 - `echo <ir json> | node bin/ir2bs`: Transform Intermediate Representation JSON into its equivalent bit
   string.
 
@@ -44,8 +51,6 @@ should work if you prefer it.
   ([Twitter thread](https://twitter.com/ChrisLuv/status/1280594189412073474)) and the code in
   http://scriptology.de/townscaper.html might have the full list of corners, but I'd rather
   understand the algorithm.
-
-- Decode IR into a corners + voxels data structure.
 
 - Encode from corners + voxels back into IR.
 
