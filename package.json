@@ -10,6 +10,7 @@
     "save2bs": "bin/save2bs.js",
     "bs2ir": "bin/bs2ir.js",
     "ir2corners": "bin/ir2corners.js",
+    "corners2ir": "bin/corners2ir.js",
     "ir2bs": "bin/ir2bs.js",
     "bs2save": "bin/bs2save.js"
   }
