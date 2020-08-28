@@ -15,6 +15,6 @@
   },
   "repository": "github:alvaro-cuesta/townscaper-clipboard",
   "scripts": {
-    "test": "test/index.js"
+    "test": "node test/index.js"
   }
 }

@@ -81,12 +81,12 @@ should work if you prefer it.
 
 - `yarn all`: Outputs a test set into the `test_out` folder.
 
-- `echo <save string> | ./bin/save2bs.js`: Decodes a save string into a bit string. Ignores non-base64
+- `echo <save string> | node bin/save2bsnode `: Decodes a save string into a bit string. Ignores non-base64
   characters.
 
   **TODO:** Maybe output without padding? Flag?
 
-- `echo <bit string> | ./bin/bs2ir.js`: Transforms a bit string into Intermediate Representation,
+- `echo <bit string> | node bin/bs2ir`: Transforms a bit string into Intermediate Representation,
   a JSON representation of that bit string. Pretty close to the raw deal but more readable and easier
   to edit.
 
@@ -95,16 +95,16 @@ should work if you prefer it.
 
   **TODO:** Maybe automatically pad? Flag?
 
-- `echo <ir json> | ./bin/ir2corners.js`: Transform IR JSON into Sparse JSON, similar to how it's
+- `echo <ir json> | node bin/ir2corners`: Transform IR JSON into Sparse JSON, similar to how it's
   laid out in the `Town*.scape` XML files (see above).
 
-- `echo <corners json> | ./bin/corners2ir.js`: Transform Sparse JSON into IR JSON.
+- `echo <corners json> | node bin/corners2ir`: Transform Sparse JSON into IR JSON.
 
-- `echo <ir json> | ./bin/ir2bs.js`: Transform IR JSON into its equivalent bit string.
+- `echo <ir json> | node bin/ir2bs`: Transform IR JSON into its equivalent bit string.
 
   **TODO:** Maybe output without padding? Flag?
 
-- `echo <bit string> | ./bin/bs2save.js`: Encodes a bit string into a save string that Townscaper can load.
+- `echo <bit string> | node bin/bs2save`: Encodes a bit string into a save string that Townscaper can load.
   Ignores non-0/1 characters, but the final string must be a multiple of 6 bits (i.e., base-64
   characters).
 
