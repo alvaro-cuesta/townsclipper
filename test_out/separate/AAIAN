@@ -10,7 +10,7 @@ AAIAN
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": false,
       "voxels": [
         0

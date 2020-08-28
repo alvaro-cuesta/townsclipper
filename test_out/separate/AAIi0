@@ -10,7 +10,7 @@ AAIi0
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         -1,

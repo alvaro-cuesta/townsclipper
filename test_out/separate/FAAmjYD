@@ -10,7 +10,7 @@ FAAmjYD
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0

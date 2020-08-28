@@ -8,7 +8,7 @@ AAAG
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": []
     }
@@ -36,7 +36,7 @@ FAAmhB
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": []
     }
@@ -64,7 +64,7 @@ FAIDhB
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": []
     }
@@ -94,7 +94,7 @@ AAIAN
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": false,
       "voxels": [
         0
@@ -126,7 +126,7 @@ AAICN
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": false,
       "voxels": [
         0
@@ -158,7 +158,7 @@ AAIcN
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": false,
       "voxels": [
         0
@@ -190,7 +190,7 @@ AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": false,
       "voxels": [
         -1,
@@ -471,7 +471,7 @@ AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": false,
       "voxels": [
         -1,
@@ -752,7 +752,7 @@ AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": false,
       "voxels": [
         -1,
@@ -1034,7 +1034,7 @@ AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": false,
       "voxels": [
         -1,
@@ -1317,7 +1317,7 @@ AAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": false,
       "voxels": [
         -1,
@@ -1601,7 +1601,7 @@ AAIgN
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0
@@ -1634,7 +1634,7 @@ AAIiN
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0
@@ -1667,7 +1667,7 @@ AAIkN
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0
@@ -1700,7 +1700,7 @@ AAImN
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0
@@ -1733,7 +1733,7 @@ AAIg0
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         -1,
@@ -1767,7 +1767,7 @@ AAIi0
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         -1,
@@ -1801,7 +1801,7 @@ AAI60
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         -1,
@@ -1835,7 +1835,7 @@ AAI80
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         -1,
@@ -1869,7 +1869,7 @@ AAIgQD
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         -1,
@@ -1904,7 +1904,7 @@ AAI8QD
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         -1,
@@ -1939,7 +1939,7 @@ AAIgAN
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         -1,
@@ -1975,7 +1975,7 @@ AAI8AN
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         -1,
@@ -2011,7 +2011,7 @@ FAAmDYD
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0
@@ -2044,7 +2044,7 @@ FAAmjYD
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0
@@ -2077,7 +2077,7 @@ FAAmDZD
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0
@@ -2110,7 +2110,7 @@ FAAmjZD
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0
@@ -2143,7 +2143,7 @@ FAAmDaD
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0
@@ -2176,7 +2176,7 @@ FAAmjaD
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0
@@ -2209,7 +2209,7 @@ FAAmDbD
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0
@@ -2242,7 +2242,7 @@ FAAmjbD
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0
@@ -2275,7 +2275,7 @@ FAAmDfD
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0
@@ -2311,7 +2311,7 @@ AABglD
       "voxels": []
     },
     {
-      "xDelta": null,
+      "xDelta": 0,
       "yOffset": 9,
       "hasGround": true,
       "voxels": []
@@ -2354,7 +2354,7 @@ AAJA4zN
       "voxels": []
     },
     {
-      "xDelta": null,
+      "xDelta": 0,
       "yOffset": 9,
       "hasGround": true,
       "voxels": [
@@ -2400,7 +2400,7 @@ AAJC4zN
       "voxels": []
     },
     {
-      "xDelta": null,
+      "xDelta": 0,
       "yOffset": 9,
       "hasGround": true,
       "voxels": [
@@ -2455,7 +2455,7 @@ GAYv4hQGqsDTd52HEDSycQJ1i1cvP
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0,

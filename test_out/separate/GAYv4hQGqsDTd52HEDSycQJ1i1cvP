@@ -24,7 +24,7 @@ GAYv4hQGqsDTd52HEDSycQJ1i1cvP
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": [
         0,

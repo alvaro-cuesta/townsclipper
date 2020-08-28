@@ -13,7 +13,7 @@ AABglD
       "voxels": []
     },
     {
-      "xDelta": null,
+      "xDelta": 0,
       "yOffset": 9,
       "hasGround": true,
       "voxels": []

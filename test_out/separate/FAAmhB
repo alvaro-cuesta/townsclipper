@@ -8,7 +8,7 @@ FAAmhB
   "corners": [
     {
       "xDelta": null,
-      "yOffset": null,
+      "yOffset": 0,
       "hasGround": true,
       "voxels": []
     }
