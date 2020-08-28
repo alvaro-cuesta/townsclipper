@@ -33,14 +33,6 @@ should work if you prefer it.
 - `echo <ir json> | node bin/ir2bs`: Transform Intermediate Representation JSON into its equivalent bit
   string.
 
-## Documentation
-
-There's a crude interpretatation of `Placemaker.TextSaveSystem.LoadFromString` in
-[`./docs/disasm.cpp`](./docs/disasm.cpp`). It's missing some things but some of the code isn't
-implemented yet in our tool so I keep it for reference.
-
-Everything else is (un)documented in the code itself.
-
 ## To Do
 
 - The grid is irregular and we need it if we want to generate valid coordinates. Chris Love has
