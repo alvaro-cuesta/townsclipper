@@ -114,23 +114,23 @@ should work if you prefer it.
 
 You can chain several commands into a pipeline. For example:
 
-1. Inspect a save string as IR
+1. **Inspect a save string as IR**
 
-  ```sh
-  echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir
-  ```
+   ```sh
+   echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir
+   ```
 
-1. Inspect a save string as sparse
+2. **Inspect a save string as sparse**
 
-  ```sh
-  echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir | node bin/ir2sparse
-  ```
+   ```sh
+   echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir | node bin/ir2sparse
+   ```
 
-3. Replace red blocks with blue
+3. **Replace red blocks with blue**
 
-  ```sh
-  echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir | sed 's/"types":\[0]/"types":\[9]/' | node bin/ir2bs | node bin/bs2save
-  ```
+   ```sh
+   echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir | sed 's/"types":\[0]/"types":\[9]/' | node bin/ir2bs | node bin/bs2save
+   ```
 
 Or you can programatically use it as a library (both NodeJS and browser via bundler should work).
 See [`./lib/index.js`](./lib/index.js).
