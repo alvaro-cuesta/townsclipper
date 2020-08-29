@@ -167,37 +167,37 @@ You can also use it locally without `-g` or `global`, but you'll have to run it 
 folder via `./node_modules/.bin/townsc` (or similar).
 
 Windows users (including MinGW apparently) might need to run `node ./node_modules/.bin/townsc`
-since shebangs apparenly run a different `node` (at least in my Windos install :/)
+since shebangs apparenly run a different `node` (at least in my Windows install :/)
 
 ### Examples
 
 1. **Inspect a save string as dense representation**
 
    ```sh
-   node bin/townsc clip dense --pretty ASJAJ6Za1TAa
+   townsc clip dense --pretty ASJAJ6Za1TAa
    ```
 
 2. **Same, but reading from a file (or any stdin for that matter)**
 
    ```sh
-   cat myFile | node bin/townsc clip dense --pretty
+   cat myFile | townsc clip dense --pretty
    ```
 
 3. **Replace red blocks with blue**
 
    ```sh
-   node bin/townsc clip dense ASJAJ6Za1TAa |
+   townsc clip dense ASJAJ6Za1TAa |
    sed 's/"types":\[0]/"types":\[9]/' |
-   node bin/townsc dense clip
+   townsc dense clip
    ```
 
 4. **Edit savestring data as sparse in Vim**
 
    ```sh
    tmpfile=$(mktemp) &&
-   node bin/townsc clip sparse --pretty ASJAJ6Za1TAa > $tmpfile &&
+   townsc clip sparse --pretty ASJAJ6Za1TAa > $tmpfile &&
    vim $tmpfile &&
-   cat $tmpfile | node bin/townsc sparse clip &&
+   cat $tmpfile | townsc sparse clip &&
    rm $tmpfile
    ```
 
