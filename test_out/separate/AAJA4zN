@@ -11,7 +11,8 @@ AAJA4zN
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true
+      "hasGround": true,
+      "voxels": []
     },
     {
       "xDelta": 0,
@@ -50,7 +51,8 @@ AAJA4zN
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true
+      "hasGround": true,
+      "voxels": []
     },
     {
       "xDelta": 0,

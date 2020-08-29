@@ -9,7 +9,8 @@ FAIDhB
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true
+      "hasGround": true,
+      "voxels": []
     }
   ]
 }
@@ -30,7 +31,8 @@ FAIDhB
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true
+      "hasGround": true,
+      "voxels": []
     }
   ]
 }
