@@ -54,12 +54,12 @@ FC5ADI3TQN
 - **Corners:** Each possible construction point in the grid. Contains a column of voxels (or empty
   space) in a specific X and Y coordinate.
 
-- **Save string:** Clipboard save string, as generated when clicking the "Save to Clipboard"
+- **Clip string:** Clipboard save string, as generated when clicking the "Save to Clipboard"
   button in Townscaper.
 
-- **Bit string:** Raw binary data decoded from save strings.
+- **Bit string:** Raw binary data decoded from clip strings.
 
-- **Dense Representation:** A JSON representation of the data inside a save string. Some details
+- **Dense Representation:** A JSON representation of the data inside a clip string. Some details
   are abstracted away since they can be calculated.
 
   Although multiple DRs can generate the same bit string (and vice versa) they can be transformed

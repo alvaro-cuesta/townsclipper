@@ -1,16 +1,16 @@
 const fs = require('fs')
 const package = require('../package.json')
 const {
-  cleanSaveString,
+  cleanClipString,
   cleanBitString,
   padInputBitString,
   removePadding,
-  saveStringToBitString,
+  clipStringToBitString,
   bitStringToDense,
   denseToSparse,
   sparseToDense,
   denseToBitString,
-  bitStringToSaveString,
+  bitStringToClipString,
  } = require('../lib')
 
 const FORMAT_ORDER = [
@@ -141,7 +141,7 @@ switch (from) {
     if (strictInAlphabet) {
       input = input.trim()
     } else {
-      input = cleanSaveString(input)
+      input = cleanClipString(input)
     }
 
     break
@@ -178,7 +178,7 @@ if (fromIndex < toIndex) {
   switch (from) {
     case 'clip': {
       if (to === 'clip') break
-      input = saveStringToBitString(input)
+      input = clipStringToBitString(input)
     }
 
     case 'bits': {
@@ -216,7 +216,7 @@ else {
 
     case 'bits': {
       if (to === 'bits') break
-      input = bitStringToSaveString(input)
+      input = bitStringToClipString(input)
     }
 
     case 'clip': {

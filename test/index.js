@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs')
-const { saveStringToBitString, bitStringToSaveString } = require('../lib/savestring')
+const { clipStringToBitString, bitStringToClipString } = require('../lib/clipstring')
 const { bitStringToDense, denseToBitString } = require('../lib/dense')
 const { denseToSparse, sparseToDense } = require('../lib/sparse')
 const { cleanBitString } = require('../lib/util')
@@ -12,20 +12,20 @@ fs.mkdirSync('./test_out/separate/')
 
 const allPath = './test_out/all'
 
-const entry = (comment, saveString) => {
-  const filePath = './test_out/separate/' + saveString
+const entry = (comment, clipString) => {
+  const filePath = './test_out/separate/' + clipString
 
   fs.writeFileSync(filePath, comment, { flag: 'a' })
   fs.writeFileSync(filePath, '\n', { flag: 'a' })
   fs.writeFileSync(allPath, comment, { flag: 'a' })
   fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
-  fs.writeFileSync(filePath, saveString, { flag: 'a' })
+  fs.writeFileSync(filePath, clipString, { flag: 'a' })
   fs.writeFileSync(filePath, '\n', { flag: 'a' })
-  fs.writeFileSync(allPath, saveString, { flag: 'a' })
+  fs.writeFileSync(allPath, clipString, { flag: 'a' })
   fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
-  const bitString = saveStringToBitString(saveString)
+  const bitString = clipStringToBitString(clipString)
   fs.writeFileSync(filePath, bitString, { flag: 'a' })
   fs.writeFileSync(filePath, '\n', { flag: 'a' })
   fs.writeFileSync(allPath, bitString, { flag: 'a' })
@@ -58,14 +58,14 @@ const entry = (comment, saveString) => {
   fs.writeFileSync(allPath, annotatedBitString, { flag: 'a' })
   fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
-  const roundtripSaveString = bitStringToSaveString(cleanBitString(annotatedBitString))
-  fs.writeFileSync(filePath, roundtripSaveString, { flag: 'a' })
+  const roundtripClipString = bitStringToClipString(cleanBitString(annotatedBitString))
+  fs.writeFileSync(filePath, roundtripClipString, { flag: 'a' })
   fs.writeFileSync(filePath, '\n', { flag: 'a' })
-  fs.writeFileSync(allPath, roundtripSaveString, { flag: 'a' })
+  fs.writeFileSync(allPath, roundtripClipString, { flag: 'a' })
   fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
-  if (roundtripSaveString !== saveString) {
-    console.error(`SaveString ${saveString} didn't roundtrip properly`)
+  if (roundtripClipString !== clipString) {
+    console.error(`Clip string ${clipString} didn't roundtrip properly`)
   }
 
   fs.writeFileSync(allPath, '---\n', { flag: 'a' })
