@@ -142,34 +142,34 @@ You can chain several commands into a pipeline. For example:
 1. **Inspect a save string as IR**
 
    ```sh
-   echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir --pretty
+   node bin/townsc clip ir --pretty ASJAJ6Za1TAa
    ```
 
-2. **Inspect a save string as sparse**
+2. **Same, but reading from a file (or any stdin for that matter)**
 
    ```sh
-   echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir | node bin/ir2sparse --pretty
+   cat myFile | node bin/townsc clip ir --pretty
    ```
 
 3. **Replace red blocks with blue**
 
    ```sh
-   echo ASJAJ6Za1TAa |
-   node bin/save2bs | node bin/bs2ir |
+   node bin/townsc clip ir ASJAJ6Za1TAa |
    sed 's/"types":\[0]/"types":\[9]/' |
-   node bin/ir2bs | node bin/bs2save
+   node bin/townsc ir clip
    ```
 
-4. **Edit savestring data in Vim**
+4. **Edit savestring data as sparse in Vim**
 
    ```sh
    tmpfile=$(mktemp) &&
-   echo ASJAJ6Za1TAa |
-   node bin/save2bs | node bin/bs2ir | node bin/ir2sparse --pretty > $tmpfile &&
+   node bin/townsc clip sparse --pretty ASJAJ6Za1TAa > $tmpfile &&
    vim $tmpfile &&
-   cat $tmpfile | node bin/sparse2ir | node bin/ir2bs | node bin/bs2save &&
+   cat $tmpfile | node bin/townsc sparse clip &&
    rm $tmpfile
    ```
+
+   (TIP: Make a shell alias out of this!)
 
 Or you can programatically use it as a library (both NodeJS and browser via bundler should work).
 See [`./lib/index.js`](./lib/index.js).
