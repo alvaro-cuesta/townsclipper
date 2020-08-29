@@ -129,14 +129,18 @@ You can chain several commands into a pipeline. For example:
 3. **Replace red blocks with blue**
 
    ```sh
-   echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir | sed 's/"types":\[0]/"types":\[9]/' | node bin/ir2bs | node bin/bs2save
+   echo ASJAJ6Za1TAa |
+   node bin/save2bs | node bin/bs2ir |
+   sed 's/"types":\[0]/"types":\[9]/' |
+   node bin/ir2bs | node bin/bs2save
    ```
 
 4. **Edit savestring data in Vim**
 
    ```sh
    tmpfile=$(mktemp) &&
-   echo ASJAJ6Za1TAa | node bin/save2bs | node bin/bs2ir | node bin/ir2sparse --pretty > $tmpfile &&
+   echo ASJAJ6Za1TAa |
+   node bin/save2bs | node bin/bs2ir | node bin/ir2sparse --pretty > $tmpfile &&
    vim $tmpfile &&
    cat $tmpfile | node bin/sparse2ir | node bin/ir2bs | node bin/bs2save &&
    rm $tmpfile
@@ -145,6 +149,10 @@ You can chain several commands into a pipeline. For example:
 Or you can programatically use it as a library (both NodeJS and browser via bundler should work).
 See [`./lib/index.js`](./lib/index.js).
 
+## Contributing
+
+Just test the library! Use it! Break it! Enjoy it! And report any bugs :P
+
 ## To Do
 
 - The grid is irregular and we need it if we want to generate valid coordinates. Chris Love has
@@ -152,10 +160,3 @@ See [`./lib/index.js`](./lib/index.js).
   ([Twitter thread](https://twitter.com/ChrisLuv/status/1280594189412073474)) and the code in
   http://scriptology.de/townscaper.html might have the full list of corners, but I'd rather
   understand the algorithm.
-
-- Post to:
-
-  - Reddit
-  - Steam
-  - https://steamcommunity.com/app/1291340/discussions/0/4078523564590326814/
-  - https://medium.com/@chrisluv/getting-hacky-with-townscaper-5a31cf7f4c6a
