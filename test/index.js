@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 const fs = require('fs')
-const { clipStringToBitString, bitStringToClipString } = require('../lib/clipstring')
-const { bitStringToDense, denseToBitString } = require('../lib/dense')
-const { denseToSparse, sparseToDense } = require('../lib/sparse')
+const { clipStringToBitString, bitStringToClipString } = require('../lib/clip-bits')
+const { bitStringToDense, denseToBitString } = require('../lib/bits-dense')
+const { denseToSparse, sparseToDense } = require('../lib/dense-sparse')
 const { cleanBitString } = require('../lib/util')
 
 fs.rmdirSync('./test_out/', { recursive: true })
