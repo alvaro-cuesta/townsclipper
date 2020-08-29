@@ -9,8 +9,7 @@ AAAG
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     }
   ]
 }
@@ -31,8 +30,7 @@ AAAG
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     }
   ]
 }
@@ -51,8 +49,7 @@ FAAmhB
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     }
   ]
 }
@@ -73,8 +70,7 @@ FAAmhB
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     }
   ]
 }
@@ -93,8 +89,7 @@ FAIDhB
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     }
   ]
 }
@@ -115,8 +110,7 @@ FAIDhB
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     }
   ]
 }
@@ -4136,14 +4130,12 @@ AABglD
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     },
     {
       "xDelta": 0,
       "yOffset": 9,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     }
   ]
 }
@@ -4171,14 +4163,12 @@ AABglD
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     },
     {
       "xDelta": 0,
       "yOffset": 9,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     }
   ]
 }
@@ -4199,8 +4189,7 @@ AAJA4zN
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     },
     {
       "xDelta": 0,
@@ -4239,8 +4228,7 @@ AAJA4zN
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     },
     {
       "xDelta": 0,
@@ -4269,8 +4257,7 @@ AAJC4zN
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     },
     {
       "xDelta": 0,
@@ -4309,8 +4296,7 @@ AAJC4zN
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     },
     {
       "xDelta": 0,

@@ -9,14 +9,12 @@ AABglD
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     },
     {
       "xDelta": 0,
       "yOffset": 9,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     }
   ]
 }
@@ -44,14 +42,12 @@ AABglD
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     },
     {
       "xDelta": 0,
       "yOffset": 9,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     }
   ]
 }

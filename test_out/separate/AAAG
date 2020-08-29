@@ -9,8 +9,7 @@ AAAG
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     }
   ]
 }
@@ -31,8 +30,7 @@ AAAG
     {
       "xDelta": null,
       "yOffset": 0,
-      "hasGround": true,
-      "voxels": []
+      "hasGround": true
     }
   ]
 }

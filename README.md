@@ -85,7 +85,7 @@ FC5ADI3TQN
      // Whether this corner's column has a ground voxel.
      hasGround: bool,
      // Index in `types` lookup table. `-1` for empty.
-     voxels: number[],
+     voxels?: number[],
    }
    ```
 
