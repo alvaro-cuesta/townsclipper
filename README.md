@@ -1,4 +1,4 @@
-# Townscaper Clipboard
+# Townsclipper
 
 [Townscaper](https://store.steampowered.com/app/1291340/Townscaper/) clipboard data format converter.
 
