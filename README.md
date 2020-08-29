@@ -1,4 +1,4 @@
-# Townsclipper
+# Townsclipper [![NPM latest version](https://img.shields.io/npm/v/townsclipper.svg)](https://npmjs.com/package/townsclipper)
 
 [Townscaper](https://store.steampowered.com/app/1291340/Townscaper/) clipboard data format converter.
 
@@ -214,7 +214,7 @@ npm install --save townsclipper
 yarn add townsclipper
 ```
 
-## Contributing
+## Contributing [![MIT License](https://img.shields.io/npm/l/townsclipper)](./LICENSE)
 
 Just test the library! Use it! Break it! Enjoy it! And
 [report any bugs](https://github.com/alvaro-cuesta/townsclipper/issues) :P
@@ -225,8 +225,6 @@ this repository!
 `yarn test` outputs a test set into the `test_out` folder. Inspect differences (if any) in
 `git diff` to check that everything is working as intended. Feel free to add tests cases if
 needed. Remember to commit `test_out` so we can use `git diff` with your changes!
-
-[MIT License](https://github.com/alvaro-cuesta/townsclipper/blob/master/LICENSE)
 
 ### To Do
 
