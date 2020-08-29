@@ -178,6 +178,11 @@ See [`./lib/index.js`](./lib/index.js).
 
 Just test the library! Use it! Break it! Enjoy it! And report any bugs :P
 
+Pull requests are welcome. [Fork](https://github.com/alvaro-cuesta/townsclipper/network/members)
+this repository!
+
+[MIT License](https://github.com/alvaro-cuesta/townsclipper/blob/master/LICENSE)
+
 ## To Do
 
 - The grid is irregular and we need it if we want to generate valid coordinates. Chris Love has
