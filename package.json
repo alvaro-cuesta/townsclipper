@@ -2,7 +2,15 @@
   "name": "townsclipper",
   "version": "0.0.1",
   "description": "Townscaper clipboard data format converter",
-  "keywords": ["townscaper", "clipboard", "converter"],
+  "keywords": [
+    "townscaper",
+    "decoder",
+    "save-editor",
+    "format-converter",
+    "clipboard",
+    "clipboard-format",
+    "converter"
+  ],
   "homepage": "https://github.com/alvaro-cuesta/townscaper-clipboard#readme",
   "bugs": "https://github.com/alvaro-cuesta/townscaper-clipboard/issues",
   "license": "MIT",
