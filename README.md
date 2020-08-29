@@ -38,7 +38,12 @@ FC5ADI3TQN
 ]
 ```
 
-...and back!
+...and back again!
+
+- [Concepts](#concepts)
+- [CLI](#cli)
+- [Library](#library)
+- [Contributing](#contributing)
 
 ## Concepts
 
@@ -112,32 +117,57 @@ FC5ADI3TQN
    }
    ```
 
-## Commands
+## CLI
 
-Assumes Node.js (latest LTS should work) and NPM/Yarn are installed. I will assume Yarn but NPM
-should work if you prefer it.
+Installation requires [Node.js](https://nodejs.org) (latest LTS should work) and NPM or Yarn.
+First install globally:
 
-- `echo <save string> | node bin/save2bs`: Decodes a save string into a bit string. Ignores non-base64
-  characters.
+```sh
+npm install -g townsclipper
+# Or with Yarn
+yarn global add townsclipper
+```
 
-- `echo <bit string> | node bin/bs2ir`: Transforms a bit string into Intermediate Representation,
-  a JSON representation of that bit string. Pretty close to the raw deal but more readable and easier
-  to edit.
+It will install the `townsc` command-line tool. See `--help` for instructions:
 
-- `echo <ir json> | node bin/ir2corners`: Transform IR JSON into Sparse JSON, similar to how it's
-  laid out in the `Town*.scape` XML files (see above).
+```
+townsc FROM TO [OPTION ...] [INPUT]
+  v0.0.1 - https://github.com/alvaro-cuesta/townsclipper/
 
-- `echo <corners json> | node bin/corners2ir`: Transform Sparse JSON into IR JSON.
+INPUT
+  Read from stdin if not specified.
 
-- `echo <ir json> | node bin/ir2bs`: Transform IR JSON into its equivalent bit string.
+FROM/TO
+  clip      Clipboard save string
+  bits      Raw binary data decoded from save string
+  ir        JSON of the data inside a save string
+  sparse    JSON with voxels in sparse form (similar to Scape files)
 
-- `echo <bit string> | node bin/bs2save`: Encodes a bit string into a save string that Townscaper can load.
+OPTIONS
+  -h, --help
+  -V, --version
 
-- `yarn test`: Outputs a test set into the `test_out` folder.
+  -p, --pretty                Enable pretty output
+                                TO =   bits         Enable annotations
+                                TO =   ir/sparse    Enable JSON indentation
 
-## Examples
+      --keep-padding          Do not remove padding on output
+                                TO =   bits
 
-You can chain several commands into a pipeline. For example:
+      --strict-in-padding     Disable autopadding of input
+                                FROM = bits
+
+      --strict-in-alphabet    Error on unexpected input characters
+                                FROM = clip         base64url characters
+```
+
+You can also use it locally without `-g` or `global`, but you'll have to run it in that specific
+folder via `./node_modules/.bin/townsc` (or similar).
+
+Windows users (including MinGW apparently) might need to run `node ./node_modules/.bin/townsc`
+since shebangs apparenly run a different `node` (at least in my Windos install :/)
+
+### Examples
 
 1. **Inspect a save string as IR**
 
@@ -171,19 +201,32 @@ You can chain several commands into a pipeline. For example:
 
    (TIP: Make a shell alias out of this!)
 
-Or you can programatically use it as a library (both NodeJS and browser via bundler should work).
-See [`./lib/index.js`](./lib/index.js).
+## Library
+
+You can programatically use Townsclipper as a library (both NodeJS and browser via bundler should
+work). See [`./lib/index.js`](./lib/index.js).
+
+```
+npm install --save townsclipper
+# Or with Yarn
+yarn add townsclipper
+```
 
 ## Contributing
 
-Just test the library! Use it! Break it! Enjoy it! And report any bugs :P
+Just test the library! Use it! Break it! Enjoy it! And
+[report any bugs](https://github.com/alvaro-cuesta/townsclipper/issues) :P
 
 Pull requests are welcome. [Fork](https://github.com/alvaro-cuesta/townsclipper/network/members)
 this repository!
 
+`yarn test` outputs a test set into the `test_out` folder. Inspect differences (if any) in
+`git diff` to check that everything is working as intended. Feel free to add tests cases if
+needed. Remember to commit `test_out` so we can use `git diff` with your changes!
+
 [MIT License](https://github.com/alvaro-cuesta/townsclipper/blob/master/LICENSE)
 
-## To Do
+### To Do
 
 - The grid is irregular and we need it if we want to generate valid coordinates. Chris Love has
   done some research on this
