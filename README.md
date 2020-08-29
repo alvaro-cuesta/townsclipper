@@ -9,7 +9,11 @@ this...
 FC5ADI3TQN
 ```
 
-![FC5ADI3TQN](./media/FC5ADI3TQN.png)
+<p align="center">
+<a href="./media/FC5ADI3TQN.png">
+<img src="./media/FC5ADI3TQN.png" alt="FC5ADI3TQN screenshot">
+</a>
+</p>
 
 ...into this...
 
