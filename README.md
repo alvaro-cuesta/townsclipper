@@ -83,7 +83,7 @@ FC5ADI3TQN
      // yPosition = yInitial + yOffset.
      yOffset: 0,
      // Whether this corner's column has a ground voxel.
-     hasGround: true,
+     hasGround: bool,
      // Index in `types` lookup table. `-1` for empty.
      voxels: number[],
    }
