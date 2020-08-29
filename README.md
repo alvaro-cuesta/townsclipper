@@ -70,7 +70,7 @@ Townscaper clipboard data format converter.
      x: number,
      y: number,
      // Map from height (0 = ground) to absolute voxel type (0 = red, 14 = white, 15 = ground)
-     voxels: { [k: number] : number},
+     voxels: { [height: number] : number },
    }
    ```
 
