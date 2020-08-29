@@ -1,6 +1,40 @@
 # Townscaper Clipboard
 
-Townscaper clipboard data format converter.
+[Townscaper](https://store.steampowered.com/app/1291340/Townscaper/) clipboard data format converter.
+
+Encodes and decodes towns in clipboard (text) into various other formats. For example, it can turn
+this...
+
+```
+FC5ADI3TQN
+```
+
+![FC5ADI3TQN](./media/FC5ADI3TQN.png)
+
+...into this...
+
+```json
+[
+  {
+    "x": -9,
+    "y": 9,
+    "voxels": {
+      "0": 15,
+      "1": 0
+    }
+  },
+  {
+    "x": 0,
+    "y": 0,
+    "voxels": {
+      "1": 0,
+      "2": 0
+    }
+  }
+]
+```
+
+...and back!
 
 ## Concepts
 
