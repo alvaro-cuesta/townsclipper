@@ -81,7 +81,7 @@ FC5ADI3TQN
      // How much to advance `X` from last corner. Must be `null` on the first `Corner`.
      xDelta: number | null,
      // yPosition = yInitial + yOffset.
-     yOffset: 0,
+     yOffset: number,
      // Whether this corner's column has a ground voxel.
      hasGround: bool,
      // Index in `types` lookup table. `-1` for empty.
