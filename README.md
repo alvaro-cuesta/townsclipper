@@ -59,10 +59,10 @@ FC5ADI3TQN
 
 - **Bit string:** Raw binary data decoded from save strings.
 
-- **Intermediate Representation (IR):** A JSON representation of the data inside a save string.
-  Some details are abstracted away since they can be calculated.
+- **Dense Representation:** A JSON representation of the data inside a save string. Some details
+  are abstracted away since they can be calculated.
 
-  Although multiple IRs can generate the same bit string (and vice versa) they can be transformed
+  Although multiple DRs can generate the same bit string (and vice versa) they can be transformed
   univocally as long as the least number of bits is used.
 
   Internally:
@@ -71,18 +71,18 @@ FC5ADI3TQN
   - Voxels are represented as a dense array of types (column in that corner) from lowest to highest.
 
    ```ts
-   type IR = {
+   type Dense = {
      // The initial X and Y coordinates from corners.
      xInitial: number,
      yInitial: number,
      // Up to 15 colors. Absolute voxel types (0 = red, 14 = white, 15 = ground).
-     // This is used as a lookup table later in IRCorner's `voxels`.
+     // This is used as a lookup table later in DenseCorner's `voxels`.
      types: number[],
      // See below.
-     corners: IRCorner[],
+     corners: DenseCorner[],
    }
 
-   type IRCorner =  {
+   type DenseCorner =  {
      // How much to advance `X` from last corner. Must be `null` on the first `Corner`.
      xDelta: number | null,
      // yPosition = yInitial + yOffset.
@@ -103,7 +103,8 @@ FC5ADI3TQN
   Long story short: they are a list of corners `(x, y, number of voxels)` and another list of
   voxels `(height, type)` in order of appearance in corners.
 
-- **Sparse:** JSON representation with voxels in sparse form (similar to Scape files).
+- **Sparse Representation:** JSON representation with voxels in sparse form (similar to Scape
+  files).
 
    ```ts
    type Sparse = SparseCorner[]
@@ -140,7 +141,7 @@ INPUT
 FROM/TO
   clip      Clipboard save string
   bits      Raw binary data decoded from save string
-  ir        JSON of the data inside a save string
+  dense     JSON of the data inside a save string
   sparse    JSON with voxels in sparse form (similar to Scape files)
 
 OPTIONS
@@ -148,8 +149,8 @@ OPTIONS
   -V, --version
 
   -p, --pretty                Enable pretty output
-                                TO =   bits         Enable annotations
-                                TO =   ir/sparse    Enable JSON indentation
+                                TO =   bits            Enable annotations
+                                TO =   dense/sparse    Enable JSON indentation
 
       --keep-padding          Do not remove padding on output
                                 TO =   bits
@@ -158,7 +159,8 @@ OPTIONS
                                 FROM = bits
 
       --strict-in-alphabet    Error on unexpected input characters
-                                FROM = clip         base64url characters
+                                FROM = clip            base64url characters
+                                FROM = bits            0/1 characters
 ```
 
 You can also use it locally without `-g` or `global`, but you'll have to run it in that specific
@@ -169,24 +171,24 @@ since shebangs apparenly run a different `node` (at least in my Windos install :
 
 ### Examples
 
-1. **Inspect a save string as IR**
+1. **Inspect a save string as dense representation**
 
    ```sh
-   node bin/townsc clip ir --pretty ASJAJ6Za1TAa
+   node bin/townsc clip dense --pretty ASJAJ6Za1TAa
    ```
 
 2. **Same, but reading from a file (or any stdin for that matter)**
 
    ```sh
-   cat myFile | node bin/townsc clip ir --pretty
+   cat myFile | node bin/townsc clip dense --pretty
    ```
 
 3. **Replace red blocks with blue**
 
    ```sh
-   node bin/townsc clip ir ASJAJ6Za1TAa |
+   node bin/townsc clip dense ASJAJ6Za1TAa |
    sed 's/"types":\[0]/"types":\[9]/' |
-   node bin/townsc ir clip
+   node bin/townsc dense clip
    ```
 
 4. **Edit savestring data as sparse in Vim**

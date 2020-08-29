@@ -6,17 +6,17 @@ const {
   padInputBitString,
   removePadding,
   saveStringToBitString,
-  bitStringToIR,
-  irToSparse,
-  sparseToIR,
-  irToBitString,
+  bitStringToDense,
+  denseToSparse,
+  sparseToDense,
+  denseToBitString,
   bitStringToSaveString,
  } = require('../lib')
 
 const FORMAT_ORDER = [
   'clip',
   'bits',
-  'ir',
+  'dense',
   'sparse',
 ]
 
@@ -82,7 +82,7 @@ INPUT
 FROM/TO
   clip      Clipboard save string
   bits      Raw binary data decoded from save string
-  ir        JSON of the data inside a save string
+  dense     JSON of the data inside a save string
   sparse    JSON with voxels in sparse form (similar to Scape files)
 
 OPTIONS
@@ -90,8 +90,8 @@ OPTIONS
   -V, --version
 
   -p, --pretty                Enable pretty output
-                                TO =   bits         Enable annotations
-                                TO =   ir/sparse    Enable JSON indentation
+                                TO =   bits           Enable annotations
+                                TO =   dense/sparse   Enable JSON indentation
 
       --keep-padding          Do not remove padding on output
                                 TO =   bits
@@ -100,8 +100,8 @@ OPTIONS
                                 FROM = bits
 
       --strict-in-alphabet    Error on unexpected input characters
-                                FROM = clip         base64url characters
-                                FROM = bits         0/1 characters`
+                                FROM = clip           base64url characters
+                                FROM = bits           0/1 characters`
 
 const VERSION =
 `townsc v${package.version} - https://github.com/alvaro-cuesta/townsclipper/`
@@ -161,7 +161,7 @@ switch (from) {
     break
   }
 
-  case 'ir':
+  case 'dense':
   case 'sparse': {
     input = JSON.parse(input)
 
@@ -183,12 +183,12 @@ if (fromIndex < toIndex) {
 
     case 'bits': {
       if (to === 'bits') break
-      input = bitStringToIR(input)
+      input = bitStringToDense(input)
     }
 
-    case 'ir': {
-      if (to === 'ir') break
-      input = irToSparse(input)
+    case 'dense': {
+      if (to === 'dense') break
+      input = denseToSparse(input)
     }
 
     case 'sparse': {
@@ -206,12 +206,12 @@ else {
   switch (from) {
     case 'sparse': {
       if (to === 'sparse') break
-      input = sparseToIR(input)
+      input = sparseToDense(input)
     }
 
-    case 'ir': {
-      if (to === 'ir') break
-      input = irToBitString(input)
+    case 'dense': {
+      if (to === 'dense') break
+      input = denseToBitString(input)
     }
 
     case 'bits': {
@@ -237,8 +237,8 @@ switch (to) {
 
   case 'bits': {
     if (pretty) {
-      input = bitStringToIR(input)
-      input = irToBitString(input, { pretty: true, pad: keepPadding })
+      input = bitStringToDense(input)
+      input = denseToBitString(input, { pretty: true, pad: keepPadding })
       input = `"${input}"`
     } else if (!keepPadding) {
       input = removePadding(input)
@@ -247,7 +247,7 @@ switch (to) {
     break
   }
 
-  case 'ir':
+  case 'dense':
   case 'sparse': {
     input = JSON.stringify(input, null, pretty ? 2 : undefined)
 
