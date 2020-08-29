@@ -117,21 +117,12 @@ FC5ADI3TQN
 Assumes Node.js (latest LTS should work) and NPM/Yarn are installed. I will assume Yarn but NPM
 should work if you prefer it.
 
-- `yarn all`: Outputs a test set into the `test_out` folder.
-
 - `echo <save string> | node bin/save2bs`: Decodes a save string into a bit string. Ignores non-base64
   characters.
-
-  **TODO:** Maybe output without padding? Flag?
 
 - `echo <bit string> | node bin/bs2ir`: Transforms a bit string into Intermediate Representation,
   a JSON representation of that bit string. Pretty close to the raw deal but more readable and easier
   to edit.
-
-  Ignores non-0/1 characters, but the final string must be a multiple of 6 bits (i.e., base-64
-  characters).
-
-  **TODO:** Maybe automatically pad? Flag?
 
 - `echo <ir json> | node bin/ir2corners`: Transform IR JSON into Sparse JSON, similar to how it's
   laid out in the `Town*.scape` XML files (see above).
@@ -140,13 +131,9 @@ should work if you prefer it.
 
 - `echo <ir json> | node bin/ir2bs`: Transform IR JSON into its equivalent bit string.
 
-  **TODO:** Maybe output without padding? Flag?
-
 - `echo <bit string> | node bin/bs2save`: Encodes a bit string into a save string that Townscaper can load.
-  Ignores non-0/1 characters, but the final string must be a multiple of 6 bits (i.e., base-64
-  characters).
 
-  **TODO:** Maybe automatically pad? Flag?
+- `yarn test`: Outputs a test set into the `test_out` folder.
 
 ## Examples
 

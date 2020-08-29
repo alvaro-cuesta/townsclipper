@@ -6,6 +6,7 @@ const { cleanSaveString } = require('../lib/util')
 
 const saveString = cleanSaveString(fs.readFileSync(process.stdin.fd, 'utf-8'))
 
+// TODO: --keep-padding
 const bitString = saveStringToBitString(saveString)
 
 process.stdout.write(bitString)

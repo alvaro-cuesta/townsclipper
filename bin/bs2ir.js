@@ -4,6 +4,8 @@ const fs = require('fs')
 const { bitStringToIR } = require('../lib/ir')
 const { cleanBitString } = require('../lib/util')
 
+// TODO: --strict-in-padding
+// TODO: --strict-in-bits
 const bitString = cleanBitString(fs.readFileSync(process.stdin.fd, 'utf-8'))
 
 const ir = bitStringToIR(bitString)
