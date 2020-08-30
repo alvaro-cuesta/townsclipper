@@ -129,7 +129,7 @@ npm install -g townsclipper
 yarn global add townsclipper
 ```
 
-It will install the `townsc` command-line tool. See `--help` for instructions:
+It will install the `townsc` command-line tool. Use `townsc --help` for instructions:
 
 ```
 townsc FROM TO [OPTION ...] [INPUT]
@@ -216,20 +216,26 @@ yarn add townsclipper
 
 ## Contributing [![MIT License](https://img.shields.io/npm/l/townsclipper)](./LICENSE)
 
-Just test the library! Use it! Break it! Enjoy it! And
+Just test the CLI and library! Use it! Break it! Enjoy it! And
 [report any bugs](https://github.com/alvaro-cuesta/townsclipper/issues) :P
 
 Pull requests are welcome. [Fork](https://github.com/alvaro-cuesta/townsclipper/network/members)
-this repository!
+this repository! For now we're just working on `master` since were aren't even v1.0.
 
-`yarn test` outputs a test set into the `test_out` folder. Inspect differences (if any) in
-`git diff` to check that everything is working as intended. Feel free to add tests cases if
-needed. Remember to commit `test_out` so we can use `git diff` with your changes!
+**Do a global search for `TODO` to see what's pending to do or discuss.**
 
-### To Do
+#### Rules:
 
-- The grid is irregular and we need it if we want to generate valid coordinates. Chris Love has
-  done some research on this
-  ([Twitter thread](https://twitter.com/ChrisLuv/status/1280594189412073474)) and the code in
-  http://scriptology.de/townscaper.html might have the full list of corners, but I'd rather
-  understand the algorithm.
+- Clipboard strings should match Townscaper's. If you can make them shorter, hide the behavior
+  behind a flag (but make it on by default!)
+
+- JSON string output doesn't have to match exactly as long as it parses the same.
+
+- Be explicit in Dense Representation. I'd rather have a `null` value than a missing key (see
+  `xDelta`).
+
+- When in doubt, do what Townscaper does.
+
+- `yarn test` outputs a test set into the `test_out` folder. Inspect differences (if any) in
+  `git diff` to check that everything is working as intended. Feel free to add tests cases if
+  needed. Remember to commit `test_out` so we can use `git diff` with your changes!
