@@ -58,19 +58,19 @@ let pretty
 ({
   value: pretty,
   args,
-} = parseArg(['--pretty', '-p'], args))
+} = parseArg(['--pretty', '-p', /* HIDDEN */ '-P'], args))
 
 let showVersion
 ({
   value: showVersion,
   args,
-} = parseArg(['--version', '-V'], args))
+} = parseArg(['--version', '-V', /* HIDDEN */ '-v'], args))
 
 let showHelp
 ({
   value: showHelp,
   args,
-} = parseArg(['--help', '--usage', '-h', '-?'], args))
+} = parseArg(['--help', '-h', /* HIDDEN */ '--usage', '-?'], args))
 
 const USAGE =
 `townsc FROM TO [OPTION ...] [INPUT]
