@@ -129,39 +129,7 @@ npm install -g townsclipper
 yarn global add townsclipper
 ```
 
-It will install the `townsc` command-line tool. Use `townsc --help` for instructions:
-
-```
-townsc FROM TO [OPTION ...] [INPUT]
-  v0.0.1 - https://github.com/alvaro-cuesta/townsclipper/
-
-INPUT
-  Read from stdin if not specified.
-
-FROM/TO
-  clip      Clipboard save string
-  bits      Raw binary data decoded from save string
-  dense     JSON of the data inside a save string
-  sparse    JSON with voxels in sparse form (similar to Scape files)
-
-OPTIONS
-  -h, --help
-  -V, --version
-
-  -p, --pretty                Enable pretty output
-                                TO =   bits            Enable annotations
-                                TO =   dense/sparse    Enable JSON indentation
-
-      --keep-padding          Do not remove padding on output
-                                TO =   bits
-
-      --strict-in-padding     Disable autopadding of input
-                                FROM = bits
-
-      --strict-in-alphabet    Error on unexpected input characters
-                                FROM = clip            base64url characters
-                                FROM = bits            0/1 characters
-```
+It will install the `townsc` command-line tool. Use `townsc --help` for instructions.
 
 You can also use it locally without `-g` or `global`, but you'll have to run it in that specific
 folder via `./node_modules/.bin/townsc` (or similar).
