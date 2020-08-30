@@ -11,18 +11,25 @@
     "clipboard-format",
     "converter"
   ],
-  "homepage": "https://github.com/alvaro-cuesta/townscaper-clipboard#readme",
-  "bugs": "https://github.com/alvaro-cuesta/townscaper-clipboard/issues",
+  "homepage": "https://github.com/alvaro-cuesta/townsclipper#readme",
+  "bugs": "https://github.com/alvaro-cuesta/townsclipper/issues",
   "license": "MIT",
   "author": "Álvaro Cuesta (https://github.com/alvaro-cuesta/)",
-  "main": "lib/index.js",
-  "directories": {
-    "lib": "lib",
-    "bin": "bin",
-    "test": "test"
+  "main": "./lib/index.js",
+  "bin": {
+    "townsc": "./bin/townsc.js"
   },
-  "repository": "github:alvaro-cuesta/townscaper-clipboard",
+  "directories": {
+    "lib": "./lib",
+    "bin": "./bin",
+    "test": "./test"
+  },
+  "repository": "github:alvaro-cuesta/townsclipper",
   "scripts": {
-    "test": "node test/index.js"
-  }
+    "test": "node ./test/index.js"
+  },
+  "files": [
+    "/lib",
+    "/bin"
+  ]
 }
