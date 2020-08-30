@@ -132,7 +132,7 @@ yarn global add townsclipper
 It will install the `townsc` command-line tool. Use `townsc --help` for instructions.
 
 You can also use it locally without `-g` or `global`, but you'll have to run it in that specific
-folder via `./node_modules/.bin/townsc`.
+folder via `./node_modules/.bin/townsc.js`.
 
 ### Examples
 
