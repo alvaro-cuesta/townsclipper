@@ -1,112 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs')
 const package = require('../package.json')
-const {
-  cleanClip,
-  clipToBits,
-  clipToDense,
-  clipToSparse,
-
-  cleanBits,
-  padInputBits,
-  removePadding,
-  bitsToClip,
-  bitsToDense,
-  bitsToSparse,
-
-  denseToClip,
-  denseToBits,
-  denseToSparse,
-
-  sparseToClip,
-  sparseToBits,
-  sparseToDense,
-} = require('../lib')
-
-const FORMATS = [
-  'clip',
-  'bits',
-  'dense',
-  'sparse',
-]
-
-const CONVERSIONS = {
-  clip: {
-    bits: clipToBits,
-    dense: clipToDense,
-    sparse: clipToSparse,
-  },
-
-  bits: {
-    clip: bitsToClip,
-    dense: bitsToDense,
-    sparse: bitsToSparse,
-  },
-
-  dense: {
-    clip: denseToClip,
-    bits: denseToBits,
-    sparse: denseToSparse,
-  },
-
-  sparse: {
-    clip: sparseToClip,
-    bits: sparseToBits,
-    dense: sparseToDense,
-  }
-}
-
-const parseArg = (flags, args) => {
-  if (flags.some(flag => args.includes(flag))) {
-    return {
-      value: true,
-      args: args.filter(arg => !flags.includes(arg)),
-    }
-  }
-
-  return {
-    value: false,
-    args,
-   }
-}
-
-let args = process.argv.slice(2)
-
-let strictInPadding
-({
-  value: strictInPadding,
-  args,
-} = parseArg(['--strict-in-padding'], args))
-
-let strictInAlphabet
-({
-  value: strictInAlphabet,
-  args,
-} = parseArg(['--strict-in-alphabet'], args))
-
-let keepPadding
-({
-  value: keepPadding,
-  args,
-} = parseArg(['--keep-padding'], args))
-
-let pretty
-({
-  value: pretty,
-  args,
-} = parseArg(['--pretty', '-p', /* HIDDEN */ '-P'], args))
-
-let showVersion
-({
-  value: showVersion,
-  args,
-} = parseArg(['--version', '-V', /* HIDDEN */ '-v'], args))
-
-let showHelp
-({
-  value: showHelp,
-  args,
-} = parseArg(['--help', '-h', /* HIDDEN */ '--usage', '-?'], args))
+const { convertToString } = require('../lib')
 
 const USAGE =
 `townsc FROM TO [OPTION ...] [INPUT]
@@ -142,6 +37,66 @@ OPTIONS
 const VERSION =
 `townsc v${package.version} - https://github.com/alvaro-cuesta/townsclipper/`
 
+const FORMATS = [
+  'clip',
+  'bits',
+  'dense',
+  'sparse',
+]
+
+// Parse arguments
+const parseArg = (flags, args) => {
+  if (flags.some(flag => args.includes(flag))) {
+    return {
+      value: true,
+      args: args.filter(arg => !flags.includes(arg)),
+    }
+  }
+
+  return {
+    value: false,
+    args,
+   }
+}
+
+let args = process.argv.slice(2)
+
+let showHelp
+({
+  value: showHelp,
+  args,
+} = parseArg(['--help', '-h', /* HIDDEN */ '--usage', '-?'], args))
+
+let showVersion
+({
+  value: showVersion,
+  args,
+} = parseArg(['--version', '-V', /* HIDDEN */ '-v'], args))
+
+let pretty
+({
+  value: pretty,
+  args,
+} = parseArg(['--pretty', '-p', /* HIDDEN */ '-P'], args))
+
+let keepPadding
+({
+  value: keepPadding,
+  args,
+} = parseArg(['--keep-padding'], args))
+
+let strictInPadding
+({
+  value: strictInPadding,
+  args,
+} = parseArg(['--strict-in-padding'], args))
+
+let strictInAlphabet
+({
+  value: strictInAlphabet,
+  args,
+} = parseArg(['--strict-in-alphabet'], args))
+
 if (showHelp) {
   console.log(USAGE)
   process.exit(0)
@@ -164,84 +119,22 @@ if (!FORMATS.includes(from) || !FORMATS.includes(to)) {
   process.exit(1)
 }
 
+// Do the magic
 let input = string
   ? string
   : fs.readFileSync(process.stdin.fd, 'utf-8')
 
-// Input
-switch (from) {
-  case 'clip': {
-    if (strictInAlphabet) {
-      input = input.trim()
-    } else {
-      input = cleanClip(input)
-    }
-
-    break
-  }
-
-  case 'bits': {
-    if (strictInAlphabet) {
-      input = input.trim()
-    } else {
-      input = cleanBits(input)
-    }
-
-    if (!strictInPadding) {
-      input = padInputBits(input)
-    }
-
-    break
-  }
-
-  case 'dense':
-  case 'sparse': {
-    input = JSON.parse(input)
-
-    break
-  }
-
-  default: {
-    throw new Error('Unreachable')
-  }
-}
-
-// Conversion
-const conversion = CONVERSIONS[from][to]
-
-if (conversion) {
-  input = conversion(input)
-}
-
-// Output
-switch (to) {
-  case 'clip': {
-    break
-  }
-
-  case 'bits': {
-    if (pretty) {
-      input = bitsToDense(input)
-      input = denseToBits(input, { pretty: true, pad: keepPadding })
-      input = `"${input}"`
-    } else if (!keepPadding) {
-      input = removePadding(input)
-    }
-
-    break
-  }
-
-  case 'dense':
-  case 'sparse': {
-    input = JSON.stringify(input, null, pretty ? 2 : undefined)
-
-    break
-  }
-
-  default: {
-    throw new Error('Unreachable')
-  }
-}
+input = convertToString(
+  from,
+  to,
+  input,
+  {
+    pretty,
+    keepPadding,
+    strictInPadding,
+    strictInAlphabet,
+  },
+)
 
 process.stdout.write(input)
 process.stdout.write('\n')
