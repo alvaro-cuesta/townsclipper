@@ -121,7 +121,7 @@ FC5ADI3TQN
 ## CLI
 
 Installation requires [Node.js](https://nodejs.org) (latest LTS should work) and NPM or Yarn.
-First install globally:
+First install globally (you might need root/admin permissions):
 
 ```sh
 npm install -g townsclipper
@@ -132,10 +132,7 @@ yarn global add townsclipper
 It will install the `townsc` command-line tool. Use `townsc --help` for instructions.
 
 You can also use it locally without `-g` or `global`, but you'll have to run it in that specific
-folder via `./node_modules/.bin/townsc` (or similar).
-
-Windows users (including MinGW apparently) might need to run `node ./node_modules/.bin/townsc`
-since shebangs apparenly run a different `node` (at least in my Windows install :/)
+folder via `./node_modules/.bin/townsc`.
 
 ### Examples
 
