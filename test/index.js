@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 const fs = require('fs')
-const { clipStringToBitString, bitStringToClipString } = require('../lib/clip-bits')
-const { bitStringToDense, denseToBitString } = require('../lib/bits-dense')
+const { clipToBits, bitsToClip } = require('../lib/clip-bits')
+const { bitsToDense, denseToBits } = require('../lib/bits-dense')
 const { denseToSparse, sparseToDense } = require('../lib/dense-sparse')
-const { cleanBitString } = require('../lib/util')
+const { cleanBits } = require('../lib/util')
 
 fs.rmdirSync('./test_out/', { recursive: true })
 fs.mkdirSync('./test_out/')
@@ -12,26 +12,26 @@ fs.mkdirSync('./test_out/separate/')
 
 const allPath = './test_out/all'
 
-const entry = (comment, clipString) => {
-  const filePath = './test_out/separate/' + clipString
+const entry = (comment, clip) => {
+  const filePath = './test_out/separate/' + clip
 
   fs.writeFileSync(filePath, comment, { flag: 'a' })
   fs.writeFileSync(filePath, '\n', { flag: 'a' })
   fs.writeFileSync(allPath, comment, { flag: 'a' })
   fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
-  fs.writeFileSync(filePath, clipString, { flag: 'a' })
+  fs.writeFileSync(filePath, clip, { flag: 'a' })
   fs.writeFileSync(filePath, '\n', { flag: 'a' })
-  fs.writeFileSync(allPath, clipString, { flag: 'a' })
+  fs.writeFileSync(allPath, clip, { flag: 'a' })
   fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
-  const bitString = clipStringToBitString(clipString)
-  fs.writeFileSync(filePath, bitString, { flag: 'a' })
+  const bits = clipToBits(clip)
+  fs.writeFileSync(filePath, bits, { flag: 'a' })
   fs.writeFileSync(filePath, '\n', { flag: 'a' })
-  fs.writeFileSync(allPath, bitString, { flag: 'a' })
+  fs.writeFileSync(allPath, bits, { flag: 'a' })
   fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
-  const dense = bitStringToDense(bitString)
+  const dense = bitsToDense(bits)
   const denseString = JSON.stringify(dense, null, 2)
   fs.writeFileSync(filePath, denseString, { flag: 'a' })
   fs.writeFileSync(filePath, '\n', { flag: 'a' })
@@ -52,20 +52,20 @@ const entry = (comment, clipString) => {
   fs.writeFileSync(allPath, denseFromSparseString, { flag: 'a' })
   fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
-  const annotatedBitString = denseToBitString(denseFromSparse)
-  fs.writeFileSync(filePath, annotatedBitString, { flag: 'a' })
+  const annotatedBits = denseToBits(denseFromSparse)
+  fs.writeFileSync(filePath, annotatedBits, { flag: 'a' })
   fs.writeFileSync(filePath, '\n', { flag: 'a' })
-  fs.writeFileSync(allPath, annotatedBitString, { flag: 'a' })
+  fs.writeFileSync(allPath, annotatedBits, { flag: 'a' })
   fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
-  const roundtripClipString = bitStringToClipString(cleanBitString(annotatedBitString))
-  fs.writeFileSync(filePath, roundtripClipString, { flag: 'a' })
+  const roundtripClip = bitsToClip(cleanBits(annotatedBits))
+  fs.writeFileSync(filePath, roundtripClip, { flag: 'a' })
   fs.writeFileSync(filePath, '\n', { flag: 'a' })
-  fs.writeFileSync(allPath, roundtripClipString, { flag: 'a' })
+  fs.writeFileSync(allPath, roundtripClip, { flag: 'a' })
   fs.writeFileSync(allPath, '\n', { flag: 'a' })
 
-  if (roundtripClipString !== clipString) {
-    console.error(`Clip string ${clipString} didn't roundtrip properly`)
+  if (roundtripClip !== clip) {
+    console.error(`Clip string ${clip} didn't roundtrip properly`)
   }
 
   fs.writeFileSync(allPath, '---\n', { flag: 'a' })

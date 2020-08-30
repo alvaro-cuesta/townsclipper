@@ -2,24 +2,24 @@
 const fs = require('fs')
 const package = require('../package.json')
 const {
-  cleanClipString,
-  clipStringToBitString,
-  clipStringToDense,
-  clipStringToSparse,
+  cleanClip,
+  clipToBits,
+  clipToDense,
+  clipToSparse,
 
-  cleanBitString,
-  padInputBitString,
+  cleanBits,
+  padInputBits,
   removePadding,
-  bitStringToClipString,
-  bitStringToDense,
-  bitStringToSparse,
+  bitsToClip,
+  bitsToDense,
+  bitsToSparse,
 
-  denseToClipString,
-  denseToBitString,
+  denseToClip,
+  denseToBits,
   denseToSparse,
 
-  sparseToClipString,
-  sparseToBitString,
+  sparseToClip,
+  sparseToBits,
   sparseToDense,
 } = require('../lib')
 
@@ -32,26 +32,26 @@ const FORMATS = [
 
 const CONVERSIONS = {
   clip: {
-    bits: clipStringToBitString,
-    dense: clipStringToDense,
-    sparse: clipStringToSparse,
+    bits: clipToBits,
+    dense: clipToDense,
+    sparse: clipToSparse,
   },
 
   bits: {
-    clip: bitStringToClipString,
-    dense: bitStringToDense,
-    sparse: bitStringToSparse,
+    clip: bitsToClip,
+    dense: bitsToDense,
+    sparse: bitsToSparse,
   },
 
   dense: {
-    clip: denseToClipString,
-    bits: denseToBitString,
+    clip: denseToClip,
+    bits: denseToBits,
     sparse: denseToSparse,
   },
 
   sparse: {
-    clip: sparseToClipString,
-    bits: sparseToBitString,
+    clip: sparseToClip,
+    bits: sparseToBits,
     dense: sparseToDense,
   }
 }
@@ -174,7 +174,7 @@ switch (from) {
     if (strictInAlphabet) {
       input = input.trim()
     } else {
-      input = cleanClipString(input)
+      input = cleanClip(input)
     }
 
     break
@@ -184,11 +184,11 @@ switch (from) {
     if (strictInAlphabet) {
       input = input.trim()
     } else {
-      input = cleanBitString(input)
+      input = cleanBits(input)
     }
 
     if (!strictInPadding) {
-      input = padInputBitString(input)
+      input = padInputBits(input)
     }
 
     break
@@ -221,8 +221,8 @@ switch (to) {
 
   case 'bits': {
     if (pretty) {
-      input = bitStringToDense(input)
-      input = denseToBitString(input, { pretty: true, pad: keepPadding })
+      input = bitsToDense(input)
+      input = denseToBits(input, { pretty: true, pad: keepPadding })
       input = `"${input}"`
     } else if (!keepPadding) {
       input = removePadding(input)
