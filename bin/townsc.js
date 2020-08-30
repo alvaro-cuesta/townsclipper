@@ -3,23 +3,58 @@ const fs = require('fs')
 const package = require('../package.json')
 const {
   cleanClipString,
+  clipStringToBitString,
+  clipStringToDense,
+  clipStringToSparse,
+
   cleanBitString,
   padInputBitString,
   removePadding,
-  clipStringToBitString,
-  bitStringToDense,
-  denseToSparse,
-  sparseToDense,
-  denseToBitString,
   bitStringToClipString,
- } = require('../lib')
+  bitStringToDense,
+  bitStringToSparse,
 
-const FORMAT_ORDER = [
+  denseToClipString,
+  denseToBitString,
+  denseToSparse,
+
+  sparseToClipString,
+  sparseToBitString,
+  sparseToDense,
+} = require('../lib')
+
+const FORMATS = [
   'clip',
   'bits',
   'dense',
   'sparse',
 ]
+
+const CONVERSIONS = {
+  clip: {
+    bits: clipStringToBitString,
+    dense: clipStringToDense,
+    sparse: clipStringToSparse,
+  },
+
+  bits: {
+    clip: bitStringToClipString,
+    dense: bitStringToDense,
+    sparse: bitStringToSparse,
+  },
+
+  dense: {
+    clip: denseToClipString,
+    bits: denseToBitString,
+    sparse: denseToSparse,
+  },
+
+  sparse: {
+    clip: sparseToClipString,
+    bits: sparseToBitString,
+    dense: sparseToDense,
+  }
+}
 
 const parseArg = (flags, args) => {
   if (flags.some(flag => args.includes(flag))) {
@@ -124,13 +159,10 @@ if (args.length < 2 || args.length > 3) {
 
 let [ from, to, string ] = args
 
-if (!FORMAT_ORDER.includes(from) || !FORMAT_ORDER.includes(to)) {
+if (!FORMATS.includes(from) || !FORMATS.includes(to)) {
   console.error(USAGE)
   process.exit(1)
 }
-
-const fromIndex = FORMAT_ORDER.indexOf(from)
-const toIndex = FORMAT_ORDER.indexOf(to)
 
 let input = string
   ? string
@@ -174,60 +206,11 @@ switch (from) {
   }
 }
 
-// Ascending
-if (fromIndex < toIndex) {
-  switch (from) {
-    case 'clip': {
-      if (to === 'clip') break
-      input = clipStringToBitString(input)
-    }
+// Conversion
+const conversion = CONVERSIONS[from][to]
 
-    case 'bits': {
-      if (to === 'bits') break
-      input = bitStringToDense(input)
-    }
-
-    case 'dense': {
-      if (to === 'dense') break
-      input = denseToSparse(input)
-    }
-
-    case 'sparse': {
-      if (to === 'sparse') break
-    }
-
-    default: {
-      throw new Error('Unreachable')
-    }
-  }
-}
-
-// Descending
-else {
-  switch (from) {
-    case 'sparse': {
-      if (to === 'sparse') break
-      input = sparseToDense(input)
-    }
-
-    case 'dense': {
-      if (to === 'dense') break
-      input = denseToBitString(input)
-    }
-
-    case 'bits': {
-      if (to === 'bits') break
-      input = bitStringToClipString(input)
-    }
-
-    case 'clip': {
-      if (to === 'clip') break
-    }
-
-    default: {
-      throw new Error('Unreachable')
-    }
-  }
+if (conversion) {
+  input = conversion(input)
 }
 
 // Output
