@@ -214,9 +214,10 @@ this repository! For now we're just working on `master` since were aren't even v
   see it in action, scroll before building any blocks.
 
   Some people have shared filled patches, and the code in http://scriptology.de/townscaper.html
-  has a list of valid corners, but they are just a limited set. This library used to have a
-  `VALID_CORNERS` list too but it was from a specific filled patch (before I realized the grid
-  limits were arbitrary and procedurally infinite).
+  has a list of valid corners, but they are just a limited set. This library
+  [used to have a `VALID_CORNERS` list too](https://github.com/alvaro-cuesta/townsclipper/blob/bf646487f3efb7dfa0566d130db60d0ccdbfb27b/lib/valid-corners.js)
+  but it was from a specific filled patch (before I realized the grid limits were arbitrary and
+  procedurally infinite).
 
   I'd rather not encourage using a specific patch, hence why I removed the `VALID_CORNERS`. For now
   you'll have to generate your own list of valid corners if needed, but ideally we'd understand the
