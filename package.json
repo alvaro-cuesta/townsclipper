@@ -26,10 +26,14 @@
   },
   "repository": "github:alvaro-cuesta/townsclipper",
   "scripts": {
-    "test": "node ./test/index.js"
+    "test": "jest",
+    "test:diff": "node ./test/index.js"
   },
   "files": [
     "/lib",
     "/bin"
-  ]
+  ],
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
 }
