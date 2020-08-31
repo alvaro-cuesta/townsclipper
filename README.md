@@ -204,3 +204,35 @@ this repository! For now we're just working on `master` since were aren't even v
 - `yarn test` outputs a test set into the `test_out` folder. Inspect differences (if any) in
   `git diff` to check that everything is working as intended. Feel free to add tests cases if
   needed. Remember to commit `test_out` so we can use `git diff` with your changes!
+
+### TODO
+
+- The grid is irregular and we need it if we want to generate valid coordinates. Chris Love has
+  done some research on this ([Twitter thread](https://twitter.com/ChrisLuv/status/1280594189412073474)).
+
+  Even though eventually the grid size is locked when you build enough, it's actually infinite. To
+  see it in action, scroll before building any blocks.
+
+  Some people have shared filled patches, and the code in http://scriptology.de/townscaper.html
+  has a list of valid corners, but they are just a limited set. This library used to have a
+  `VALID_CORNERS` list too but it was from a specific filled patch (before I realized the grid
+  limits were arbitrary and procedurally infinite).
+
+  I'd rather not encourage using a specific patch, hence why I removed the `VALID_CORNERS`. For now
+  you'll have to generate your own list of valid corners if needed, but ideally we'd understand the
+  algorithm.
+
+  See https://www.youtube.com/watch?v=1hqt8JkYRdI for more info.
+
+  - Maybe use this to check if corners are valid in dense and sparse (from and to)?
+
+- Automated tests. Jest?
+
+- Maybe don't implicitly remove empty corners and warn intead? Applies to various conversions in
+  dense, sparse, bits.
+
+  - This might require having a warning system versus just throwing.
+
+- Online version for people that can't/won't use the CLI.
+
+- Some kind of random generator to showcase the possibilities.
