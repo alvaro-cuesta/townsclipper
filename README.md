@@ -201,7 +201,9 @@ this repository! For now we're just working on `master` since were aren't even v
 
 - When in doubt, do what Townscaper does.
 
-- `yarn test` outputs a test set into the `test_out` folder. Inspect differences (if any) in
+- `yarn test` shouldn't break, and you should add the relevant tests (if any) to your changes.
+
+- `yarn test:diff` outputs a test set into the `test_out` folder. Inspect differences (if any) in
   `git diff` to check that everything is working as intended. Feel free to add tests cases if
   needed. Remember to commit `test_out` so we can use `git diff` with your changes!
 
@@ -234,6 +236,17 @@ this repository! For now we're just working on `master` since were aren't even v
 
   - This might require having a warning system versus just throwing.
 
+- Maybe be more lenient with input as long as it doesn't break output (e.g. from dense to sparse,
+  why not accept too many `types`?) On the other hand, it might help catch bugs.
+
+  More instances: accept `0` or `undefined` when expecting `null`, etc.
+
 - Online version for people that can't/won't use the CLI.
 
 - Some kind of random generator to showcase the possibilities.
+
+- /dev/clipboard example (what about MINGW64? I've been unable to make Node's stdout work)
+
+- BUG: `{"xInitial":0,"yInitial":0,"types":[],"corners":[]}` outputs AAAA but Townscaper uses AAAE
+
+- Move `test:diff` to Jest
