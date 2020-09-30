@@ -229,7 +229,7 @@ this repository! For now we're just working on `master` since were aren't even v
 
   - Maybe use this to check if corners are valid in dense and sparse (from and to)?
 
-- Automated tests. Jest?
+- Test: `denseToBits` missing cases
 
 - Maybe don't implicitly remove empty corners and warn intead? Applies to various conversions in
   dense, sparse, bits.
@@ -246,8 +246,6 @@ this repository! For now we're just working on `master` since were aren't even v
 - Some kind of random generator to showcase the possibilities.
 
 - /dev/clipboard example (what about MINGW64? I've been unable to make Node's stdout work)
-
-- BUG: `{"xInitial":0,"yInitial":0,"types":[],"corners":[]}` outputs AAAA but Townscaper uses AAAE
 
 - Move `test:diff` to Jest
 
