@@ -250,3 +250,13 @@ this repository! For now we're just working on `master` since were aren't even v
 - BUG: `{"xInitial":0,"yInitial":0,"types":[],"corners":[]}` outputs AAAA but Townscaper uses AAAE
 
 - Move `test:diff` to Jest
+
+- Remove trailing `-1`s in `bitsToDense` and `denseToBits`?
+
+  - Can of worms? It would make sense to also do things like sort types in Townscaper order
+
+  - OTOH we're already removing empty corners
+
+  - Annotate might already be broken since `bitsToDense` might lose information
+
+  - Maybe hide behind `--optimize` flag, or `--no-optimize`
